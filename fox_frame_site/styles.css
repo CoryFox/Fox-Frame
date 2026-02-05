@@ -1,0 +1,364 @@
+/*
+  Fox & Frame Studio Custom Styles
+
+  This stylesheet defines a simple design system for a calm and trustworthy
+  web experience. It uses a muted colour palette and classic typography
+  paired with clean layout rules. All colours are defined as CSS variables
+  for easy adjustments.  
+*/
+
+:root {
+  /* Colours */
+  --bg-main: #F6F7F4; /* Soft Canvas */
+  --text-main: #1F2933; /* Slate Ink */
+  --text-muted: #6B7280; /* Mist Grey */
+  --border-soft: #D1D5DB; /* Soft Line */
+  --accent-main: #3A6F73; /* Frame Teal */
+  --accent-warm: #C47A45; /* Fox Clay */
+
+  /* Fonts */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* Global styles */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+}
+
+.navbar-brand span {
+  font-family: var(--font-heading);
+}
+
+/* Utility classes */
+.section {
+  padding: 72px 0;
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 48px 0;
+  }
+}
+
+.bg-surface {
+  background: #EEF5F5; /* Very light tint for alternate sections */
+}
+
+.border-top {
+  border-top: 1px solid var(--border-soft) !important;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  z-index: 1050;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-main);
+}
+
+/* Nav brand mark placeholder */
+.brand-mark {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  background: var(--accent-main);
+}
+
+/* Hero styles */
+.hero {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  background: linear-gradient(180deg, rgba(58, 111, 115, 0.06), rgba(58, 111, 115, 0));
+}
+
+.hero-card {
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(31, 41, 51, 0.06);
+}
+
+/* Dots in hero card */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-red { background: #ef4444; }
+.dot-amber { background: #f59e0b; }
+.dot-green { background: #10b981; }
+
+/* Skeleton placeholder */
+.skeleton .sk-line {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(31, 41, 51, 0.08);
+  margin-bottom: 10px;
+}
+
+.skeleton .sk-block {
+  height: 160px;
+  border-radius: 14px;
+  background: rgba(31, 41, 51, 0.08);
+}
+
+.skeleton .sk-row {
+  display: flex;
+  gap: 10px;
+}
+
+.skeleton .sk-chip {
+  height: 32px;
+  width: 90px;
+  border-radius: 999px;
+  background: rgba(31, 41, 51, 0.08);
+}
+
+/* Pills */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(31, 41, 51, 0.04);
+  border: 1px solid var(--border-soft);
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+/* Soft cards */
+.card-soft {
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(31, 41, 51, 0.04);
+}
+
+/* Icon circles */
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border-soft);
+  background: rgba(58, 111, 115, 0.06);
+  font-size: 1.25rem;
+  color: var(--accent-main);
+}
+
+/* Callouts */
+.callout {
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  background: rgba(58, 111, 115, 0.04);
+  padding: 18px;
+}
+
+.callout-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(58, 111, 115, 0.12);
+  border: 1px solid var(--border-soft);
+  font-size: 1.25rem;
+  color: var(--accent-main);
+}
+
+/* Steps */
+.steps {
+  display: grid;
+  gap: 12px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  border: 1px solid var(--border-soft);
+  background: rgba(58, 111, 115, 0.08);
+  color: var(--text-main);
+}
+
+/* Mini values list in About section */
+.mini {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 14px;
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.mini i {
+  font-size: 1.1rem;
+  margin-top: 2px;
+  color: var(--accent-main);
+}
+
+/* Profile panel */
+.profile {
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(31, 41, 51, 0.06);
+}
+
+.tag {
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(31, 41, 51, 0.03);
+  text-align: center;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+/* Pricing cards */
+.pricing {
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(31, 41, 51, 0.05);
+}
+
+.pricing .card-body {
+  padding: 28px;
+}
+
+.pricing.featured {
+  border-width: 2px;
+  border-color: rgba(58, 111, 115, 0.35);
+  box-shadow: 0 14px 40px rgba(31, 41, 51, 0.08);
+}
+
+.pricing .price .currency {
+  font-size: 1.1rem;
+  vertical-align: top;
+}
+
+.pricing .price .amount {
+  font-size: 2.2rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--accent-main);
+  border-color: var(--accent-main);
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #2F5C60;
+  border-color: #2F5C60;
+  color: #ffffff;
+}
+
+.btn-outline-secondary {
+  color: var(--accent-main);
+  border-color: var(--accent-main);
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  background-color: rgba(58, 111, 115, 0.06);
+  color: var(--accent-main);
+}
+
+.btn-link {
+  color: var(--accent-main);
+  text-decoration: none;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  text-decoration: underline;
+}
+
+/* Form inputs */
+.form-control {
+  border-radius: 8px;
+  border-color: var(--border-soft);
+}
+
+.form-control:focus {
+  border-color: var(--accent-main);
+  box-shadow: 0 0 0 0.25rem rgba(58, 111, 115, 0.25);
+}
+
+/* Accordions */
+.accordion-button {
+  background-color: #ffffff;
+  color: var(--text-main);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: rgba(58, 111, 115, 0.06);
+  color: var(--text-main);
+}
+
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.accordion-body {
+  background-color: #ffffff;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Scroll margin for anchor links */
+:target {
+  scroll-margin-top: 92px;
+}
