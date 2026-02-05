@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--border-soft);
   font-size: 1.25rem;
   color: var(--accent-main);
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1;
 }
 
 /* Steps */
