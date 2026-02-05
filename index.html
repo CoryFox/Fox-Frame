@@ -58,6 +58,8 @@
         ]
       }
     </script>
+    <script data-goatcounter="https://foxandframe.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#topNav" data-bs-smooth-scroll="true" tabindex="0">
     <a class="visually-hidden-focusable skip-link" href="#main">Skip to content</a>
@@ -850,13 +852,13 @@
                       </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-sm-row gap-2 align-items-sm-center justify-content-between">
-                      <button class="btn btn-primary btn-lg" type="submit">Send message</button>
+                      <button class="btn btn-primary btn-lg" type="submit" onclick="goatcounter.count({path: '/contact-submit'})">Send message</button>
                       <span class="small text-muted">Reply within 48 hours (Mon to Fri)</span>
                     </div>
                   </form>
                 </div>
               </div>
-              <p class="small text-muted mt-3 mb-0">Privacy: your details are only used to respond to your enquiry.</p>
+              <p class="small text-muted mt-3 mb-0">By submitting this form, you agree to our <a href="/privacy.html" class="link-secondary">Privacy Policy</a>.</p>
             </div>
           </div>
         </div>
@@ -878,9 +880,9 @@
               <div class="small text-muted">
                 © <span id="year"></span> Fox &amp; Frame Studio
                 <span class="mx-2">|</span>
-                <a class="link-secondary" href="#">Privacy</a>
+                <a class="link-secondary" href="/privacy.html">Privacy</a>
                 <span class="mx-2">|</span>
-                <a class="link-secondary" href="#">Terms</a>
+                <a class="link-secondary" href="/terms.html">Terms</a>
               </div>
             </div>
           </div>
