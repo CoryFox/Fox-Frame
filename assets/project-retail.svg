@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Retail website placeholder">
+  <defs>
+    <style>
+      .bg{fill:#F6F7F4}
+      .stroke{stroke:#D1D5DB;stroke-width:10;fill:#ffffff}
+      .accent{stroke:#3A6F73;stroke-width:14;stroke-linecap:round}
+      .muted{fill:#6B7280;font-family:Inter,Arial,sans-serif;font-size:28px}
+      .title{fill:#1F2933;font-family:'Playfair Display',Georgia,serif;font-size:34px;font-weight:600}
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="512" height="512" rx="64"/>
+  <rect class="stroke" x="64" y="92" width="384" height="328" rx="40"/>
+  <line class="accent" x1="110" y1="150" x2="402" y2="150"/>
+  <line class="accent" x1="110" y1="194" x2="310" y2="194"/>
+  <rect x="110" y="236" width="140" height="120" rx="18" fill="#C47A45" opacity="0.18" stroke="#C47A45" stroke-width="6"/>
+  <rect x="262" y="236" width="140" height="120" rx="18" fill="#3A6F73" opacity="0.10" stroke="#3A6F73" stroke-width="6"/>
+  <rect x="110" y="370" width="220" height="18" rx="9" fill="#1F2933" opacity="0.12"/>
+  <rect x="110" y="402" width="180" height="18" rx="9" fill="#1F2933" opacity="0.12"/>
+  <text x="96" y="468" class="title">Retail Site</text>
+  <text x="96" y="500" class="muted">Placeholder preview</text>
+</svg>

@@ -18,6 +18,46 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css"/>
+
+    <!-- Structured data (no ratings/reviews until you have real ones) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://foxandframe.design/#organization",
+            "name": "Fox & Frame Studio",
+            "url": "https://foxandframe.design/",
+            "email": "hello@foxandframe.design",
+            "logo": "https://foxandframe.design/assets/logo2LightBG.png"
+          },
+          {
+            "@type": "WebSite",
+            "name": "Fox & Frame Studio",
+            "url": "https://foxandframe.design/",
+            "publisher": {
+              "@id": "https://foxandframe.design/#organization"
+            }
+          },
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://foxandframe.design/#organization",
+            "name": "Fox & Frame Studio",
+            "url": "https://foxandframe.design/",
+            "email": "hello@foxandframe.design",
+            "image": "https://foxandframe.design/assets/logo2LightBG.png",
+            "areaServed": "GB",
+            "knowsAbout": [
+              "Web design",
+              "Website development",
+              "Website support",
+              "Hosting and maintenance"
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#topNav" data-bs-smooth-scroll="true" tabindex="0">
     <a class="visually-hidden-focusable skip-link" href="#main">Skip to content</a>
@@ -34,6 +74,8 @@
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials">Feedback</a></li>
             <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
             <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -94,6 +136,19 @@
           </div>
         </div>
       </header>
+
+      <!-- Trust strip -->
+      <section class="trust-strip" aria-label="Key assurances">
+        <div class="container">
+          <div class="trust-strip-inner">
+            <div class="trust-item"><i class="bi bi-geo-alt"></i><span>UK-based</span></div>
+            <div class="trust-item"><i class="bi bi-tag"></i><span>Clear pricing</span></div>
+            <div class="trust-item"><i class="bi bi-file-earmark-text"></i><span>No long contracts</span></div>
+            <div class="trust-item"><i class="bi bi-phone"></i><span>Mobile-first</span></div>
+            <div class="trust-item"><i class="bi bi-life-preserver"></i><span>Ongoing support</span></div>
+          </div>
+        </div>
+      </section>
       <!-- Problem/Solution Section -->
       <section class="section">
         <div class="container">
@@ -350,6 +405,179 @@
                   If you’d rather not spend evenings fixing a website, this keeps it simple.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work / Portfolio Section -->
+      <section class="section" id="work">
+        <div class="container">
+          <div class="row align-items-end g-4 mb-4">
+            <div class="col-lg-7">
+              <h2 class="h1 fw-semibold mb-2">Our work</h2>
+            </div>
+            <div class="col-lg-5 text-lg-end">
+              <a class="btn btn-outline-secondary" href="#contact">Get in touch</a>
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-lg-6">
+              <div class="card card-soft h-100 hover-rise">
+                <div class="card-body p-4 p-md-5">
+                  <div class="project-header">
+                    <img src="assets/project-trades.svg" alt="Placeholder project preview" class="project-thumb"/>
+                    <div>
+                      <h3 class="h4 fw-semibold mb-1">Local Trades Website</h3>
+                      <p class="text-muted mb-2">New site for a local plumbing and heating business.</p>
+                      <div class="d-flex flex-wrap gap-2">
+                        <span class="chip">Design</span>
+                        <span class="chip">Build</span>
+                        <span class="chip">Enquiries</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-4"/>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><i class="bi bi-check2 me-2"></i>Clear service pages and click-to-call</li>
+                    <li class="mb-2"><i class="bi bi-check2 me-2"></i>Simple quote request form</li>
+                    <li class="mb-0"><i class="bi bi-check2 me-2"></i>Google Maps and reviews block</li>
+                  </ul>
+                  <p class="small text-muted mt-3 mb-0"><strong>Outcome:</strong> easier enquiries and better first impressions.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card card-soft h-100 hover-rise">
+                <div class="card-body p-4 p-md-5">
+                  <div class="project-header">
+                    <img src="assets/project-retail.svg" alt="Placeholder project preview" class="project-thumb"/>
+                    <div>
+                      <h3 class="h4 fw-semibold mb-1">Independent Shop Redesign</h3>
+                      <p class="text-muted mb-2">A modern refresh for an independent retailer.</p>
+                      <div class="d-flex flex-wrap gap-2">
+                        <span class="chip">Redesign</span>
+                        <span class="chip">Performance</span>
+                        <span class="chip">Content</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-4"/>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><i class="bi bi-check2 me-2"></i>Cleaner navigation and layout</li>
+                    <li class="mb-2"><i class="bi bi-check2 me-2"></i>Faster loading, better mobile experience</li>
+                    <li class="mb-0"><i class="bi bi-check2 me-2"></i>Product and gallery showcase</li>
+                  </ul>
+                  <p class="small text-muted mt-3 mb-0"><strong>Outcome:</strong> easier browsing and more confident customers.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card card-soft h-100 hover-rise">
+                <div class="card-body p-4 p-md-5">
+                  <div class="project-header">
+                    <img src="assets/project-tutor.svg" alt="Placeholder project preview" class="project-thumb"/>
+                    <div>
+                      <h3 class="h4 fw-semibold mb-1">Tutor / Service Provider Site</h3>
+                      <p class="text-muted mb-2">Simple site focused on bookings and enquiries.</p>
+                      <div class="d-flex flex-wrap gap-2">
+                        <span class="chip">Mobile-first</span>
+                        <span class="chip">Booking</span>
+                        <span class="chip">SEO basics</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-4"/>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><i class="bi bi-check2 me-2"></i>Clear call to action and enquiry form</li>
+                    <li class="mb-2"><i class="bi bi-check2 me-2"></i>Services and availability section</li>
+                    <li class="mb-0"><i class="bi bi-check2 me-2"></i>Testimonials area ready for real feedback</li>
+                  </ul>
+                  <p class="small text-muted mt-3 mb-0"><strong>Outcome:</strong> more consistent enquiries with less admin.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card card-soft h-100 hover-rise">
+                <div class="card-body p-4 p-md-5">
+                  <div class="project-header">
+                    <img src="assets/project-shop.svg" alt="Placeholder project preview" class="project-thumb"/>
+                    <div>
+                      <h3 class="h4 fw-semibold mb-1">Small Online Shop Setup</h3>
+                      <p class="text-muted mb-2">Basic e‑commerce setup with training handover.</p>
+                      <div class="d-flex flex-wrap gap-2">
+                        <span class="chip">Shopify</span>
+                        <span class="chip">Payments</span>
+                        <span class="chip">Training</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-4"/>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><i class="bi bi-check2 me-2"></i>Simple product structure and checkout</li>
+                    <li class="mb-2"><i class="bi bi-check2 me-2"></i>Shipping and policies setup</li>
+                    <li class="mb-0"><i class="bi bi-check2 me-2"></i>Basic training so updates are easy</li>
+                  </ul>
+                  <p class="small text-muted mt-3 mb-0"><strong>Outcome:</strong> direct online sales with a tidy setup.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="section bg-surface" id="testimonials">
+        <div class="container">
+          <div class="row align-items-end g-4 mb-4">
+            <div class="col-lg-7">
+              <h2 class="h1 fw-semibold mb-2">Feedback</h2>
+              <p class="text-muted mb-0">Sample wording for now. This will be replaced with real client feedback as reviews come in.</p>
+            </div>
+            <div class="col-lg-5 text-lg-end">
+              <a class="btn btn-outline-secondary" href="#contact">Request references</a>
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-lg-4">
+              <figure class="card card-soft h-100 hover-rise">
+                <div class="card-body p-4 p-md-5">
+                  <div class="stars mb-3" aria-hidden="true">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <blockquote class="mb-3">“The whole process was straightforward. I didn’t have to worry about the technical side and the website looks professional and easy to use.”</blockquote>
+                  <figcaption class="small text-muted mb-0">– Mark H., local trades business</figcaption>
+                </div>
+              </figure>
+            </div>
+
+            <div class="col-lg-4">
+              <figure class="card card-soft h-100 hover-rise">
+                <div class="card-body p-4 p-md-5">
+                  <div class="stars mb-3" aria-hidden="true">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <blockquote class="mb-3">“Everything was explained clearly and nothing felt complicated. The site reflects our business well and works great on mobile.”</blockquote>
+                  <figcaption class="small text-muted mb-0">– Sarah L., independent retailer</figcaption>
+                </div>
+              </figure>
+            </div>
+
+            <div class="col-lg-4">
+              <figure class="card card-soft h-100 hover-rise">
+                <div class="card-body p-4 p-md-5">
+                  <div class="stars mb-3" aria-hidden="true">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <blockquote class="mb-3">“I wanted something simple that looked professional. Updates are handled quickly and I don’t have to think about the website anymore.”</blockquote>
+                  <figcaption class="small text-muted mb-0">– James P., service provider</figcaption>
+                </div>
+              </figure>
             </div>
           </div>
         </div>

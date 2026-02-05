@@ -220,6 +220,91 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-main);
 }
 
+/* Trust strip */
+.trust-strip {
+  padding: 18px 0;
+  background: rgba(58, 111, 115, 0.06);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.trust-strip-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  background: rgba(246, 247, 244, 0.7);
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.trust-item i {
+  color: var(--accent-main);
+}
+
+/* Portfolio + testimonial helpers */
+.project-header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.project-thumb {
+  width: 92px;
+  height: 92px;
+  border-radius: 16px;
+  border: 1px solid var(--border-soft);
+  background: rgba(58, 111, 115, 0.06);
+  flex: 0 0 auto;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: rgba(31, 41, 51, 0.03);
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.stars {
+  color: var(--accent-warm);
+  display: inline-flex;
+  gap: 2px;
+  font-size: 0.95rem;
+}
+
+/* Subtle hover/raise animation (respect reduced motion) */
+.hover-rise {
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.hover-rise:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(31, 41, 51, 0.08);
+  border-color: rgba(58, 111, 115, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hover-rise {
+    transition: none;
+  }
+  .hover-rise:hover {
+    transform: none;
+  }
+}
+
 /* Mini values list in About section */
 .mini {
   display: flex;
@@ -357,6 +442,67 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+/* Subtle interaction */
+.hover-rise {
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.hover-rise:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(31, 41, 51, 0.10);
+  border-color: rgba(58, 111, 115, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hover-rise {
+    transition: none;
+  }
+  .hover-rise:hover {
+    transform: none;
+  }
+}
+
+/* Portfolio */
+.project-header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.project-thumb {
+  width: 88px;
+  height: 88px;
+  flex: 0 0 auto;
+  border-radius: 18px;
+  border: 1px solid var(--border-soft);
+  background: #ffffff;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: rgba(31, 41, 51, 0.03);
+  color: var(--text-main);
+  font-size: 0.85rem;
+}
+
+/* Testimonials */
+.stars {
+  color: var(--accent-warm);
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+}
+
+blockquote {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  color: var(--text-main);
+  line-height: 1.65;
 }
 
 /* Scroll margin for anchor links */
