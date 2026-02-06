@@ -125,6 +125,20 @@
         if (desktopBtn) desktopBtn.classList.add("active");
 
         modal.show();
+
+        // On small screens, default to mobile view and hide the desktop/mobile toggle buttons
+        try {
+          const isSmall = window.matchMedia('(max-width: 768px)').matches;
+          if (isSmall) {
+            const viewer = modalEl.querySelector('[data-ff-viewer]');
+            setMode(viewer, 'mobile');
+            modalEl.querySelectorAll('[data-ff-mode]').forEach((b) => {
+              b.style.display = 'none';
+            });
+          }
+        } catch (e) {
+          // ignore any errors in mobile detection
+        }
       });
     });
 
@@ -213,6 +227,20 @@
     if (open) open.href = demo.url;
 
     attachModeButtons(scope);
+
+    // If viewed on a small device, hide the desktop/mobile toggle and default to the mobile preview
+    try {
+      const isSmall = window.matchMedia('(max-width: 768px)').matches;
+      if (isSmall) {
+        const wrap = scope.querySelector('[data-ff-viewer]');
+        setMode(wrap, 'mobile');
+        scope.querySelectorAll('[data-ff-mode]').forEach((b) => {
+          b.style.display = 'none';
+        });
+      }
+    } catch (e) {
+      // fail silently if matchMedia is unsupported
+    }
   }
 
   document.addEventListener("DOMContentLoaded", () => {
