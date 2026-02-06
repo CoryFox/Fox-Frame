@@ -113,24 +113,48 @@
             </div>
             <div class="col-lg-6">
               <div class="hero-card p-4 p-md-5">
+                <!-- Top bar with coloured dots reminiscent of a browser window -->
                 <div class="d-flex align-items-center gap-2 mb-4">
                   <span class="dot dot-red" aria-hidden="true"></span>
                   <span class="dot dot-amber" aria-hidden="true"></span>
                   <span class="dot dot-green" aria-hidden="true"></span>
-                  <span class="ms-auto small text-muted">Preview</span>
                 </div>
-                <!-- Replace skeleton placeholder with real demo screenshots -->
-                <div class="row gx-2 gy-3">
-                  <div class="col-12">
-                    <img src="assets/hero-trades.png" alt="Example website for trades business" class="img-fluid rounded" loading="lazy" />
+                <!-- Carousel to showcase one mock‑up at a time -->
+                <div id="demoCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000">
+                  <!-- Indicators -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#demoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#demoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                   </div>
-                  <div class="col-6">
-                    <img src="assets/hero-retail.png" alt="Example website for independent shop" class="img-fluid rounded" loading="lazy" />
+                  <div class="carousel-inner rounded-3 overflow-hidden shadow-sm">
+                    <div class="carousel-item active">
+                      <div class="mockup-frame">
+                        <img src="assets/hero-savewise-full.png" class="d-block w-100" alt="Insurance demo hero" loading="lazy" style="height: 260px; object-fit: cover; object-position: top;" />
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="mockup-frame">
+                        <img src="assets/hero-over50-full.png" class="d-block w-100" alt="Over 50s life insurance demo" loading="lazy" style="height: 260px; object-fit: cover; object-position: top;" />
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="mockup-frame">
+                        <img src="assets/hero-trades-full.png" class="d-block w-100" alt="Trades demo hero" loading="lazy" style="height: 260px; object-fit: cover; object-position: top;" />
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-6">
-                    <img src="assets/hero-tutor.png" alt="Example website for service provider" class="img-fluid rounded" loading="lazy" />
-                  </div>
+                  <!-- Controls -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#demoCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#demoCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
                 </div>
+                <p class="small text-muted mt-3 mb-0">Mock‑ups from our demo builds. Use the arrows or swipe to see more.</p>
               </div>
             </div>
           </div>

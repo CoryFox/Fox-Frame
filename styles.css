@@ -89,14 +89,19 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
   padding-top: 72px;
   padding-bottom: 72px;
-  background: linear-gradient(180deg, rgba(58, 111, 115, 0.06), rgba(58, 111, 115, 0));
+  /* Soft layered background with subtle radial accents to add depth */
+  background:
+    radial-gradient(circle at 20% 20%, rgba(196, 122, 69, 0.05), rgba(196, 122, 69, 0) 60%),
+    radial-gradient(circle at 80% 80%, rgba(58, 111, 115, 0.05), rgba(58, 111, 115, 0) 60%),
+    linear-gradient(180deg, rgba(58, 111, 115, 0.04), rgba(58, 111, 115, 0));
 }
 
 .hero-card {
   border: 1px solid var(--border-soft);
-  border-radius: 18px;
+  /* Increased radius and deeper shadow to create a luxe elevated effect */
+  border-radius: 24px;
   background: #ffffff;
-  box-shadow: 0 10px 30px rgba(31, 41, 51, 0.06);
+  box-shadow: 0 15px 45px rgba(31, 41, 51, 0.08);
 }
 
 /* Dots in hero card */
@@ -117,6 +122,19 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 999px;
   background: rgba(31, 41, 51, 0.08);
   margin-bottom: 10px;
+}
+
+/* Custom frame to present hero screenshots with more depth */
+.mockup-frame {
+  background: #F7F9FA;
+  border-radius: 24px;
+  padding: 16px;
+  box-shadow: 0 15px 40px rgba(31, 41, 51, 0.1);
+}
+
+.mockup-frame img {
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(31, 41, 51, 0.07);
 }
 
 .skeleton .sk-block {
@@ -153,9 +171,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Soft cards */
 .card-soft {
   border: 1px solid var(--border-soft);
-  border-radius: 16px;
+  border-radius: 20px;
   background: #ffffff;
-  box-shadow: 0 6px 20px rgba(31, 41, 51, 0.04);
+  /* Deeper shadow for a more premium, elevated feel */
+  box-shadow: 0 12px 32px rgba(31, 41, 51, 0.05);
 }
 
 /* Icon circles */
