@@ -29,9 +29,82 @@ body {
   line-height: 1.6;
 }
 
+/* Navbar: make it feel bespoke, not "Bootstrap" */
+#topNav {
+  background: rgba(246, 247, 244, 0.86) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(31, 41, 51, 0.10) !important;
+  box-shadow: 0 10px 30px rgba(31, 41, 51, 0.05);
+}
+
+#topNav .navbar-brand img {
+  transition: transform 220ms ease;
+}
+
+#topNav .navbar-brand:hover img {
+  transform: translateY(-1px);
+}
+
+#topNav .nav-link {
+  position: relative;
+  font-weight: 500;
+  color: var(--text-main);
+  opacity: 0.86;
+  padding: 10px 12px;
+  border-radius: 12px;
+  transition: opacity 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+#topNav .nav-link:hover {
+  opacity: 1;
+  background: rgba(58, 111, 115, 0.06);
+  transform: translateY(-1px);
+}
+
+#topNav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 7px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(58, 111, 115, 0), rgba(58, 111, 115, 0.65), rgba(196, 122, 69, 0.65), rgba(196, 122, 69, 0));
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 220ms ease;
+}
+
+#topNav .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(58, 111, 115, 0.18);
+}
+
+#topNav .navbar-toggler-icon {
+  filter: saturate(0) brightness(0.2);
+  opacity: 0.9;
+}
+
+#topNav .nav-link:hover::after,
+#topNav .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+#topNav .navbar-toggler {
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(31, 41, 51, 0.10);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   color: var(--text-main);
+}
+
+/* Reduce visual density: keep copy readable and give layouts room to breathe */
+.lead {
+  max-width: 54ch;
 }
 
 .navbar-brand span {
@@ -541,6 +614,63 @@ h1, h2, h3, h4, h5, h6 {
 
 .accordion-body {
   background-color: #ffffff;
+}
+
+/* FAQ (custom details accordion) */
+.faq {
+  display: grid;
+  gap: 12px;
+}
+
+.faq-item {
+  border: 1px solid rgba(31, 41, 51, 0.12);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 28px rgba(31, 41, 51, 0.05);
+  overflow: hidden;
+}
+
+.faq-q {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.faq-q::-webkit-details-marker {
+  display: none;
+}
+
+.faq-q::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid rgba(31, 41, 51, 0.55);
+  border-bottom: 2px solid rgba(31, 41, 51, 0.55);
+  transform: rotate(45deg);
+  transition: transform 200ms ease;
+  flex: 0 0 auto;
+}
+
+.faq-item[open] .faq-q {
+  background: rgba(58, 111, 115, 0.06);
+}
+
+.faq-item[open] .faq-q::after {
+  transform: rotate(-135deg);
+}
+
+.faq-a {
+  padding: 0 18px 16px 18px;
+}
+
+.faq-item:focus-within {
+  box-shadow: 0 0 0 3px rgba(58, 111, 115, 0.18), 0 12px 30px rgba(31, 41, 51, 0.06);
+  border-color: rgba(58, 111, 115, 0.35);
 }
 
 .footer a {
