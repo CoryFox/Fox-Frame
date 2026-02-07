@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Shop setup placeholder">
+  <defs>
+    <style>
+      .bg{fill:#F6F7F4}
+      .stroke{stroke:#D1D5DB;stroke-width:10;fill:#ffffff}
+      .accent{stroke:#3A6F73;stroke-width:14;stroke-linecap:round}
+      .muted{fill:#6B7280;font-family:Inter,Arial,sans-serif;font-size:28px}
+      .title{fill:#1F2933;font-family:'Playfair Display',Georgia,serif;font-size:34px;font-weight:600}
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="512" height="512" rx="64"/>
+  <rect class="stroke" x="64" y="92" width="384" height="328" rx="40"/>
+  <line class="accent" x1="110" y1="150" x2="402" y2="150"/>
+  <line class="accent" x1="110" y1="194" x2="332" y2="194"/>
+  <rect x="110" y="240" width="292" height="166" rx="22" fill="#1F2933" opacity="0.06"/>
+  <rect x="134" y="270" width="120" height="100" rx="18" fill="#C47A45" opacity="0.18" stroke="#C47A45" stroke-width="6"/>
+  <rect x="266" y="270" width="112" height="18" rx="9" fill="#1F2933" opacity="0.14"/>
+  <rect x="266" y="304" width="92" height="18" rx="9" fill="#1F2933" opacity="0.12"/>
+  <rect x="266" y="342" width="90" height="34" rx="17" fill="#3A6F73" opacity="0.18"/>
+  <text x="96" y="468" class="title">Shop Setup</text>
+  <text x="96" y="500" class="muted">Placeholder preview</text>
+</svg>
