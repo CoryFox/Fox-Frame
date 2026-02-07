@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New You Fitness, Premium Coaching</title>
+
+  <meta name="description" content="Premium personal training and coaching for sustainable fat loss, strength, and confidence. Get the free 7-Day Kickstart Plan and book a free consultation." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0B1412",
+            forest: "#143A33",
+            sage: "#7CC6A4",
+            gold: "#D7B35D",
+            clay: "#E56B5B",
+            mist: "#F6F8F7",
+            stone: "#E7ECEA"
+          },
+          fontFamily: {
+            display: ["Fraunces", "ui-serif", "Georgia", "serif"],
+            sans: ["Manrope", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Arial"]
+          },
+          boxShadow: {
+            glow: "0 0 0 1px rgba(215,179,93,0.35), 0 18px 50px rgba(11,20,18,0.35)"
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-mist text-ink font-sans antialiased">
+  <!-- Sticky CTA -->
+  <div class="fixed bottom-4 left-4 right-4 z-50 md:hidden">
+    <a href="#lead" class="block rounded-2xl bg-gold px-5 py-4 text-center font-bold tracking-wide text-ink shadow-glow">
+      Get free plan + book a call
+    </a>
+  </div>
+
+  <!-- Nav -->
+  <header class="absolute inset-x-0 top-0 z-40">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+      <a href="#" class="flex items-center gap-3">
+        <img src="monogram.svg" alt="New You Fitness" class="h-11 w-11 rounded-2xl" />
+        <span class="hidden sm:inline text-stone/90 tracking-wide">New You Fitness</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-stone/80">
+        <a class="hover:text-stone transition" href="#magnet">Free plan</a>
+        <a class="hover:text-stone transition" href="#results">Results</a>
+        <a class="hover:text-stone transition" href="#how">How it works</a>
+        <a class="hover:text-stone transition" href="#book">Book</a>
+      </nav>
+
+      <a href="#lead" class="hidden md:inline-flex rounded-full bg-gold px-5 py-3 font-bold text-ink shadow-glow hover:scale-[1.02] transition">
+        Get free plan
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="relative overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="hero_premium.jpg" alt="" class="h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/60 to-ink"></div>
+    </div>
+
+    <section class="relative mx-auto max-w-6xl px-6 pt-28 pb-16 md:pt-32 md:pb-28">
+      <div class="grid items-center gap-10 md:grid-cols-12">
+        <div class="md:col-span-7">
+          <img src="logo.svg" alt="New You Fitness" class="h-20 w-auto opacity-95" />
+
+          <h1 class="mt-6 font-display text-4xl leading-tight text-mist md:text-6xl">
+            Premium coaching for <span class="text-gold">real life</span>, not perfect weeks
+          </h1>
+
+          <p class="mt-6 max-w-xl text-lg text-stone/90 md:text-xl">
+            Start with the free 7-Day Kickstart Plan, then book a free 15 minute consultation to tailor it to your goal.
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a href="#lead" class="inline-flex items-center justify-center rounded-full bg-gold px-7 py-4 font-bold text-ink shadow-glow hover:scale-[1.02] transition">
+              Get the free plan
+            </a>
+            <a href="#book" class="inline-flex items-center justify-center rounded-full border border-stone/30 bg-white/5 px-7 py-4 font-semibold text-mist hover:bg-white/10 transition">
+              Skip to booking
+            </a>
+          </div>
+
+          <div class="mt-10 grid grid-cols-3 gap-4 text-stone/90">
+            <div class="rounded-2xl border border-stone/20 bg-white/5 p-4 backdrop-blur">
+              <div class="text-2xl font-extrabold text-mist">7 day</div>
+              <div class="text-sm">Kickstart plan</div>
+            </div>
+            <div class="rounded-2xl border border-stone/20 bg-white/5 p-4 backdrop-blur">
+              <div class="text-2xl font-extrabold text-mist">15 min</div>
+              <div class="text-sm">Free consultation</div>
+            </div>
+            <div class="rounded-2xl border border-stone/20 bg-white/5 p-4 backdrop-blur">
+              <div class="text-2xl font-extrabold text-mist">Simple</div>
+              <div class="text-sm">Habits over hustle</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lead form above the fold -->
+        <div class="md:col-span-5">
+          <div id="lead" class="reveal rounded-3xl border border-stone/20 bg-mist/95 p-6 shadow-glow md:p-8">
+            <div class="flex items-center gap-4">
+              <img src="lead-magnet-cover.jpg" alt="7-Day Kickstart Plan" class="h-16 w-16 rounded-2xl object-cover border border-stone" />
+              <div>
+                <h2 class="font-display text-2xl text-ink">Get the free 7-Day Kickstart Plan</h2>
+                <p class="mt-1 text-sm text-ink/70">Instant download, then pick a time for your free call.</p>
+              </div>
+            </div>
+
+            <form class="mt-6 grid gap-3" onsubmit="return handleOptIn(event)">
+              <label class="grid gap-1">
+                <span class="text-sm font-semibold text-ink/80">Name</span>
+                <input required name="name" class="h-12 rounded-xl border border-stone bg-white px-4 outline-none focus:ring-2 focus:ring-gold" placeholder="Your name" />
+              </label>
+
+              <label class="grid gap-1">
+                <span class="text-sm font-semibold text-ink/80">Email</span>
+                <input required type="email" name="email" class="h-12 rounded-xl border border-stone bg-white px-4 outline-none focus:ring-2 focus:ring-gold" placeholder="you@example.com" />
+              </label>
+
+              <label class="grid gap-1">
+                <span class="text-sm font-semibold text-ink/80">Goal</span>
+                <select name="goal" class="h-12 rounded-xl border border-stone bg-white px-4 outline-none focus:ring-2 focus:ring-gold">
+                  <option>Fat loss</option>
+                  <option>Strength and muscle</option>
+                  <option>Confidence and energy</option>
+                  <option>Sports performance</option>
+                </select>
+              </label>
+
+              <button class="mt-2 h-12 rounded-xl bg-forest px-5 font-bold text-mist hover:brightness-110 transition">
+                Send me the plan
+              </button>
+
+              <p class="text-xs text-ink/60">
+                We respect your privacy. Your information is kept confidential and used only to prepare your plan and schedule your consultation.
+              </p>
+
+              <div id="optInMessage" class="hidden rounded-xl bg-sage/15 p-3 text-sm text-forest"></div>
+            </form>
+
+            <div class="mt-6 flex items-center gap-3 rounded-2xl border border-stone/60 bg-white p-4">
+              <div class="h-10 w-10 rounded-xl bg-gold/20 grid place-items-center">
+                <span class="text-forest font-extrabold">✓</span>
+              </div>
+              <div class="text-sm text-ink/75">
+                <span class="font-bold text-ink">Next:</span> choose a time, get a simple plan, start this week.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead magnet section -->
+    <section id="magnet" class="relative mx-auto max-w-6xl px-6 pb-10 md:pb-16">
+      <div class="reveal grid gap-8 rounded-3xl border border-stone/15 bg-white p-6 md:grid-cols-12 md:p-10">
+        <div class="md:col-span-5">
+          <img src="lead-magnet-cover.jpg" alt="Kickstart Plan" class="w-full rounded-3xl border border-stone object-cover" />
+        </div>
+        <div class="md:col-span-7">
+          <div class="inline-flex items-center gap-2 rounded-full bg-gold/15 px-4 py-2 text-sm font-bold text-forest">
+            <span class="h-2 w-2 rounded-full bg-gold"></span>
+            Free guide
+          </div>
+          <h2 class="mt-4 font-display text-4xl text-ink">Your 7‑Day Kickstart Plan</h2>
+          <p class="mt-4 text-ink/70">
+            Reset your routine with simple workouts, flexible nutrition, and daily habits designed for busy professionals. This premium guide helps you build momentum without overwhelm.
+          </p>
+
+          <div class="mt-6 grid gap-3 md:grid-cols-2">
+            <div class="rounded-2xl border border-stone/40 bg-mist p-4">
+              <div class="font-extrabold text-forest">Training blueprint</div>
+              <div class="text-sm text-ink/70">Full‑body sessions that scale with your fitness level.</div>
+            </div>
+            <div class="rounded-2xl border border-stone/40 bg-mist p-4">
+              <div class="font-extrabold text-forest">Nutrition plan</div>
+              <div class="text-sm text-ink/70">Balanced, protein‑first meals with room for real life.</div>
+            </div>
+            <div class="rounded-2xl border border-stone/40 bg-mist p-4">
+              <div class="font-extrabold text-forest">Habit tracker</div>
+              <div class="text-sm text-ink/70">Small daily actions that build consistency.</div>
+            </div>
+            <div class="rounded-2xl border border-stone/40 bg-mist p-4">
+              <div class="font-extrabold text-forest">Next steps</div>
+              <div class="text-sm text-ink/70">Book your consultation to customise your plan.</div>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#lead" class="rounded-full bg-gold px-7 py-4 font-bold text-ink shadow-glow hover:scale-[1.02] transition">Get it free</a>
+            <a href="#book" class="rounded-full border border-stone/50 bg-white px-7 py-4 font-semibold text-ink hover:bg-mist transition">Book the call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof -->
+    <section id="results" class="relative mx-auto max-w-6xl px-6 pb-10 md:pb-16">
+      <div class="reveal grid gap-6 rounded-3xl border border-stone/15 bg-white p-6 md:grid-cols-3 md:p-10">
+        <div>
+          <div class="text-3xl font-extrabold text-forest">+ Energy</div>
+          <p class="mt-2 text-ink/70">Feel better day-to-day, not just in photos.</p>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-forest">- Body fat</div>
+          <p class="mt-2 text-ink/70">Sustainable loss with habits you can keep.</p>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-forest">+ Confidence</div>
+          <p class="mt-2 text-ink/70">A plan that fits real life, including busy weeks.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="reveal rounded-3xl border border-stone/15 bg-white p-6">
+          <p class="text-ink/80">“Down 12kg, stronger, and my cravings are finally manageable.”</p>
+          <p class="mt-3 text-sm font-bold text-forest">Sarah M.</p>
+        </div>
+        <div class="reveal rounded-3xl border border-stone/15 bg-white p-6">
+          <p class="text-ink/80">“I needed structure. The weekly check-ins kept me consistent.”</p>
+          <p class="mt-3 text-sm font-bold text-forest">Tom R.</p>
+        </div>
+        <div class="reveal rounded-3xl border border-stone/15 bg-white p-6">
+          <p class="text-ink/80">“Simple, premium, and actually sustainable. No nonsense.”</p>
+          <p class="mt-3 text-sm font-bold text-forest">James L.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="mx-auto max-w-6xl px-6 py-14 md:py-20">
+      <!--
+        The original "How it works" layout placed the explanatory content on the left and a vertical list
+        of steps on the right, which left an awkward amount of empty space on large screens. The
+        redesigned section centres the heading and description and presents the three steps in a
+        responsive grid below. To further improve contrast and cohesion with the rest of the page,
+        the entire section now sits on a white card with a subtle border, just like the other key
+        sections on the page.
+      -->
+      <div class="reveal rounded-3xl border border-stone/15 bg-white p-6 md:p-10">
+        <div class="text-center md:max-w-3xl md:mx-auto">
+          <h2 class="font-display text-4xl text-ink">How it works</h2>
+          <p class="mt-4 text-ink/70">
+            Start with our free Kickstart Plan, then talk to a coach about your goals. We’ll build a programme around your life.
+          </p>
+          <div class="mt-6 inline-flex items-center gap-2 rounded-full bg-gold/15 px-4 py-2 text-sm font-bold text-forest">
+            <span class="h-2 w-2 rounded-full bg-gold"></span>
+            No pressure, just clarity
+          </div>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="reveal flex flex-col rounded-3xl border border-stone/15 bg-mist p-6 text-left">
+            <div class="h-12 w-12 mb-3 rounded-xl bg-forest/10 grid place-items-center font-extrabold text-forest">1</div>
+            <h3 class="text-lg font-extrabold text-ink">Download your plan</h3>
+            <p class="mt-1 text-ink/70">Get instant access to a week of workouts, nutrition and habits. Use it to reset and see what premium coaching feels like.</p>
+          </div>
+          <div class="reveal flex flex-col rounded-3xl border border-stone/15 bg-mist p-6 text-left">
+            <div class="h-12 w-12 mb-3 rounded-xl bg-forest/10 grid place-items-center font-extrabold text-forest">2</div>
+            <h3 class="text-lg font-extrabold text-ink">Book your call</h3>
+            <p class="mt-1 text-ink/70">Pick a 15&nbsp;minute slot that fits your schedule. We’ll audit your goals, training history and daily routine.</p>
+          </div>
+          <div class="reveal flex flex-col rounded-3xl border border-stone/15 bg-mist p-6 text-left">
+            <div class="h-12 w-12 mb-3 rounded-xl bg-forest/10 grid place-items-center font-extrabold text-forest">3</div>
+            <h3 class="text-lg font-extrabold text-ink">Get your roadmap</h3>
+            <p class="mt-1 text-ink/70">Leave the call knowing exactly what to do next. If we’re a good fit, we’ll talk about working together.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking section -->
+    <section id="book" class="bg-white/60">
+      <div class="mx-auto max-w-6xl px-6 py-14 md:py-20">
+        <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <h2 class="font-display text-4xl text-ink">Book your free call</h2>
+            <p class="mt-3 text-ink/70">Select a day and time that suits you. We'll send you a confirmation email with all the details.</p>
+          </div>
+          <a href="#lead" class="rounded-full bg-gold px-6 py-3 font-bold text-ink shadow-glow hover:scale-[1.02] transition">
+            Get the plan first
+          </a>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-12">
+          <div class="reveal md:col-span-8 rounded-3xl border border-stone/15 bg-white p-6 md:p-8">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <div class="text-sm font-bold text-forest/70">Step 2</div>
+                <div class="text-2xl font-extrabold text-ink">Choose a slot</div>
+                <div class="mt-1 text-sm text-ink/60">Timezone: Europe/London</div>
+              </div>
+
+              <div class="flex flex-wrap gap-2">
+                <button id="prevWeek" class="h-10 rounded-full border border-stone/60 bg-white px-4 text-sm font-bold text-ink hover:bg-mist transition">Prev</button>
+                <button id="nextWeek" class="h-10 rounded-full border border-stone/60 bg-white px-4 text-sm font-bold text-ink hover:bg-mist transition">Next</button>
+              </div>
+            </div>
+
+            <div class="mt-6 overflow-x-auto">
+              <!--
+                The calendar wrapper previously had a hardcoded minimum width (min-w-[760px])
+                which introduced awkward horizontal scrolling and a blank gap when scrolled
+                all the way to the right. The updated wrapper instead fills the available
+                width (w-full) so that the grid adapts more gracefully. Padding has been
+                reduced to avoid extra horizontal space.
+              -->
+              <div class="w-full rounded-3xl border border-stone/25 bg-mist p-3">
+                <div class="grid calendar-grid gap-2" id="calendarGrid">
+                  <!-- JS injects day headers + time rows -->
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 grid gap-4 md:grid-cols-2">
+              <div class="rounded-2xl border border-stone/40 bg-mist p-4">
+                <div class="text-sm font-bold text-ink">Selected</div>
+                <div id="selectedSlot" class="mt-1 text-ink/70">Pick a slot to continue.</div>
+              </div>
+
+              <div class="rounded-2xl border border-stone/40 bg-white p-4">
+                <div class="text-sm font-bold text-ink">Your details</div>
+                <div id="linkLead" class="mt-1 text-sm text-ink/70">Tip: opt in above to attach your details automatically.</div>
+              </div>
+            </div>
+
+            <div class="mt-5 flex flex-wrap gap-3">
+              <button id="confirmBooking" class="h-12 rounded-2xl bg-forest px-6 font-bold text-mist hover:brightness-110 transition disabled:opacity-40 disabled:cursor-not-allowed" disabled>
+                Confirm booking
+              </button>
+              <button id="clearBooking" class="h-12 rounded-2xl border border-stone/60 bg-white px-6 font-bold text-ink hover:bg-mist transition">
+                Clear
+              </button>
+            </div>
+
+            <div id="bookingMessage" class="mt-4 hidden rounded-2xl bg-sage/15 p-4 text-forest"></div>
+          </div>
+
+          <div class="reveal md:col-span-4 rounded-3xl border border-stone/15 bg-ink p-6 md:p-8 text-mist shadow-glow">
+            <div class="text-sm font-bold text-gold">What happens on the call</div>
+            <h3 class="mt-2 text-2xl font-extrabold">You’ll leave with a plan</h3>
+            <ul class="mt-6 grid gap-3 text-stone/85">
+              <li>Goal and schedule audit</li>
+              <li>Training and nutrition next steps</li>
+              <li>What to do this week</li>
+              <li>If it’s a fit, package options</li>
+            </ul>
+
+            <div class="mt-8 rounded-2xl border border-gold/30 bg-white/5 p-4">
+              <div class="font-bold text-mist">Premium promise</div>
+              <div class="text-sm text-stone/85">Clear steps, calm accountability, and a plan you can actually follow.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</section>
+
+    <footer class="border-t border-stone/30 bg-mist">
+      <div class="mx-auto max-w-6xl px-6 py-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div class="flex items-center gap-3">
+          <img src="monogram.svg" class="h-10 w-10 rounded-2xl" alt="NYF" />
+          <div>
+            <div class="font-bold text-ink">New You Fitness</div>
+            <div class="text-sm text-ink/60">Premium coaching, sustainable results</div>
+          </div>
+        </div>
+        <div class="text-sm text-ink/60">© 2026 New You Fitness</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal for download -->
+  <div id="modal" class="fixed inset-0 hidden items-center justify-center bg-ink/70 p-6 z-50">
+    <div class="w-full max-w-lg rounded-3xl border border-stone/20 bg-mist p-6 shadow-glow">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <div class="text-sm font-bold text-forest/70">Success</div>
+          <div class="font-display text-2xl text-ink">Your plan is ready</div>
+          <p class="mt-2 text-ink/70">Your Kickstart Plan is ready. Download it and then book your free consultation.</p>
+        </div>
+        <button onclick="closeModal()" class="h-10 w-10 rounded-2xl border border-stone/60 bg-white font-extrabold text-ink hover:bg-mist">×</button>
+      </div>
+
+      <div class="mt-6 grid gap-3 sm:grid-cols-1">
+        <a class="rounded-2xl bg-forest px-5 py-4 text-center font-bold text-mist hover:brightness-110 transition" href="kickstart-plan.html">
+          Download your plan
+        </a>
+      </div>
+
+      <div class="mt-6 rounded-2xl bg-gold/15 p-4 text-forest">
+        <div class="font-bold">Next step</div>
+        <div class="text-sm">Scroll down to book your complimentary consultation.</div>
+        <a href="#book" onclick="closeModal()" class="mt-3 inline-flex rounded-full bg-gold px-5 py-3 font-bold text-ink shadow-glow hover:scale-[1.02] transition">Book now</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

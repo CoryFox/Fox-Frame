@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NYF monogram">
+  <defs>
+    <radialGradient id="rg" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#7CC6A4" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#143A33" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0B1412" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D7B35D" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#7CC6A4" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="512" height="512" rx="120" fill="url(#rg)"/>
+  <g opacity="0.12">
+    <circle cx="132" cy="128" r="130" fill="#D7B35D"/>
+  </g>
+  <path d="M140 310c34-86 72-130 116-130 44 0 82 44 116 130" fill="none" stroke="url(#lg)" stroke-width="16" stroke-linecap="round"/>
+  <text x="256" y="358" text-anchor="middle" font-family="Manrope, ui-sans-serif, system-ui" font-size="86" fill="#F6F8F7" font-weight="800" letter-spacing="4">NYF</text>
+</svg>

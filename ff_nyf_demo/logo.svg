@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="420" viewBox="0 0 1400 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="New You Fitness logo">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D7B35D" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#7CC6A4" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="420" fill="none"/>
+  <g transform="translate(80,90)">
+    <path d="M60 40c34 0 62 28 62 62 0 34-28 62-62 62S-2 136-2 102C-2 68 26 40 60 40Z" fill="url(#g)" opacity="0.14"/>
+    <path d="M20 110c26-52 54-78 84-78 30 0 58 26 84 78" fill="none" stroke="url(#g)" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+    <path d="M62 132c10-26 22-39 36-39 14 0 26 13 36 39" fill="none" stroke="#D7B35D" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+  </g>
+
+  <g transform="translate(310,120)">
+    <text x="0" y="0" font-family="Fraunces, ui-serif, Georgia, serif" font-size="88" fill="#F6F8F7" font-weight="600" letter-spacing="0.5">
+      New You
+    </text>
+    <text x="0" y="98" font-family="Manrope, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="88" fill="#7CC6A4" font-weight="700" letter-spacing="0.4">
+      Fitness
+    </text>
+    <text x="0" y="156" font-family="Manrope, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="26" fill="#E7ECEA" font-weight="500" opacity="0.9" letter-spacing="0.8">
+      Premium coaching, sustainable results
+    </text>
+  </g>
+</svg>

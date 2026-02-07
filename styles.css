@@ -448,6 +448,74 @@ h1, h2, h3, h4, h5, h6 {
   flex: 0 0 auto;
 }
 
+/* Showcase media for portfolio cards */
+.showcase {
+  position: relative;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .showcase {
+    padding-right: 0;
+  }
+}
+
+.showcase-main {
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(31, 41, 51, 0.06);
+}
+
+/* Make carousel controls feel more modern and less "Bootstrapy" */
+.ff-showcase-carousel .carousel-control-prev,
+.ff-showcase-carousel .carousel-control-next {
+  width: 44px;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.ff-showcase-carousel:hover .carousel-control-prev,
+.ff-showcase-carousel:hover .carousel-control-next {
+  opacity: 0.95;
+}
+
+.ff-showcase-carousel .carousel-control-prev-icon,
+.ff-showcase-carousel .carousel-control-next-icon {
+  filter: drop-shadow(0 10px 14px rgba(31, 41, 51, 0.22));
+}
+
+.ff-showcase-carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.showcase-mobile {
+  border: 1px solid var(--border-soft);
+  border-radius: 26px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(31, 41, 51, 0.06);
+}
+
+@media (min-width: 768px) {
+  .showcase-mobile {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    width: 190px;
+    transform: translateZ(0);
+  }
+}
+
+.showcase-mobile img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .chip {
   display: inline-flex;
   align-items: center;
@@ -457,6 +525,33 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(31, 41, 51, 0.03);
   font-size: 0.85rem;
   color: var(--text-main);
+}
+
+.chip-tech {
+  background: rgba(58, 111, 115, 0.08);
+  border-color: rgba(58, 111, 115, 0.28);
+}
+
+/* Result line under portfolio highlights */
+.result-pill {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--border-soft);
+  background: rgba(31, 41, 51, 0.025);
+}
+
+.result-pill i {
+  color: var(--accent-main);
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+.result-pill span {
+  line-height: 1.3;
 }
 
 .stars {

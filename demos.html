@@ -107,18 +107,49 @@
 
       const cards = Object.values(demos).map((d) => {
         const tags = (d.tags || []).slice(0, 3).map((t) => `<span class=\"chip\">${t}</span>`).join("");
+        const tech = (d.tech || []).slice(0, 5).map((t) => `<span class=\"chip chip-tech\">${t}</span>`).join("");
+
+        const img1 = d.showcase?.images?.[0];
+        const img2 = d.showcase?.images?.[1];
+        const mobile = d.showcase?.mobile;
+
+        const gallery = (img1 && img2) ? `
+          <div class="showcase mb-4">
+            <div class="showcase-main">
+              <div id="ffDemoCarousel-${d.key}" class="carousel slide ff-showcase-carousel" data-bs-ride="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="${img1.src}" class="d-block w-100" alt="${img1.alt || "Demo preview"}" loading="lazy"/>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="${img2.src}" class="d-block w-100" alt="${img2.alt || "Demo preview"}" loading="lazy"/>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#ffDemoCarousel-${d.key}" data-bs-slide="prev" aria-label="Previous">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#ffDemoCarousel-${d.key}" data-bs-slide="next" aria-label="Next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+            ${mobile ? `<div class="showcase-mobile d-none d-md-block"><img src="${mobile.src}" alt="${mobile.alt || "Mobile preview"}" loading="lazy"/></div>` : ""}
+          </div>
+        ` : "";
+
         return `
           <div class="col-lg-6">
             <div class="card card-soft h-100 hover-rise">
               <div class="card-body p-4 p-md-5">
                 <p class="text-uppercase small text-muted mb-2">Demo</p>
+                ${gallery}
                 <h2 class="h4 fw-semibold mb-1">${d.title}</h2>
                 <p class="text-muted mb-3">${d.subtitle || ""}</p>
-                <div class="d-flex flex-wrap gap-2 mb-3">${tags}</div>
+                <div class="d-flex flex-wrap gap-2 mb-2">${tags}</div>
+                <div class="d-flex flex-wrap gap-2 mb-3">${tech}</div>
                 <p class="mb-4">${d.overview || ""}</p>
                 <div class="d-flex flex-wrap gap-2">
-                  <a class="btn btn-primary" href="/demo.html?demo=${encodeURIComponent(d.key)}"><i class="bi bi-play-circle me-2"></i>Preview</a>
-                  <a class="btn btn-outline-secondary" target="_blank" rel="noopener" href="${d.url}"><i class="bi bi-box-arrow-up-right me-2"></i>Open</a>
+                  <a class="btn btn-primary" target="_blank" rel="noopener" href="${d.url}"><i class="bi bi-box-arrow-up-right me-2"></i>View site</a>
                 </div>
               </div>
             </div>
