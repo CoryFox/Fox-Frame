@@ -1,7 +1,7 @@
-name: Minify and Build
+name: Pull Request Build Check
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 1
       - name: Install minify CLI
         run: |
           sudo apt-get update -y
@@ -20,17 +18,14 @@ jobs:
         run: |
           mkdir -p dist
           rsync -a --exclude='.git' ./ dist/
-      - name: Minify HTML files
+      - name: Run minification tests
         run: |
+          # Minify HTML, CSS, and JS files in dist
           find dist -type f -name '*.html' -print0 | xargs -0 -n1 -P4 sh -c 'minify "$0" > "$0.tmp" && mv "$0.tmp" "$0"'
-      - name: Minify CSS files
-        run: |
           find dist -type f -name '*.css' -print0 | xargs -0 -n1 -P4 sh -c 'minify "$0" > "$0.tmp" && mv "$0.tmp" "$0"'
-      - name: Minify JavaScript files
-        run: |
           find dist -type f -name '*.js' -print0 | xargs -0 -n1 -P4 sh -c 'minify "$0" > "$0.tmp" && mv "$0.tmp" "$0"'
-      - name: Upload minified site artifact
+      - name: Archive built site
         uses: actions/upload-artifact@v4
         with:
-          name: site-dist
+          name: pr-build-dist
           path: dist
