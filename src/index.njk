@@ -407,27 +407,37 @@ headExtras: |
               <div class="col-lg-6">
                 <div class="card card-soft h-100 hover-rise">
                   <div class="card-body p-4 p-md-5">
-                    <div class="showcase mb-4">
-                      <div class="showcase-main">
-                        <div id="ffCarousel-{{ project.key }}" class="carousel slide ff-showcase-carousel" data-bs-ride="false">
-                          <div class="carousel-inner">
-                            {% for img in project.showcase.images %}
-                              <div class="carousel-item{% if loop.first %} active{% endif %}">
-                                <img src="/{{ img.src }}" class="d-block w-100" alt="{{ img.alt }}" loading="lazy" />
-                              </div>
-                            {% endfor %}
+                    <div class="showcase mb-4" data-showcase>
+                      <div class="showcase-controls" role="tablist" aria-label="Preview mode">
+                        <button class="showcase-toggle is-active" type="button" data-showcase-tab data-showcase-target="desktop" role="tab" aria-selected="true">Desktop</button>
+                        <button class="showcase-toggle" type="button" data-showcase-tab data-showcase-target="mobile" role="tab" aria-selected="false">Mobile</button>
+                      </div>
+                      <div class="showcase-pane is-active" data-showcase-pane="desktop">
+                        <div class="showcase-main">
+                          <div id="ffCarousel-{{ project.key }}" class="carousel slide ff-showcase-carousel" data-bs-ride="false">
+                            <div class="carousel-inner">
+                              {% for img in project.showcase.images %}
+                                <div class="carousel-item{% if loop.first %} active{% endif %}">
+                                  <img src="/{{ img.src }}" class="d-block w-100" alt="{{ img.alt }}" loading="lazy" />
+                                </div>
+                              {% endfor %}
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#ffCarousel-{{ project.key }}" data-bs-slide="prev" aria-label="Previous">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#ffCarousel-{{ project.key }}" data-bs-slide="next" aria-label="Next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
                           </div>
-                          <button class="carousel-control-prev" type="button" data-bs-target="#ffCarousel-{{ project.key }}" data-bs-slide="prev" aria-label="Previous">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          </button>
-                          <button class="carousel-control-next" type="button" data-bs-target="#ffCarousel-{{ project.key }}" data-bs-slide="next" aria-label="Next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          </button>
                         </div>
                       </div>
                       {% if project.showcase.mobile %}
-                        <div class="showcase-mobile d-none d-md-block">
-                          <img src="/{{ project.showcase.mobile.src }}" alt="{{ project.showcase.mobile.alt }}" loading="lazy" />
+                        <div class="showcase-pane" data-showcase-pane="mobile">
+                          <div class="showcase-mobile">
+                            <div class="showcase-mobile-scroll">
+                              <img src="/{{ project.showcase.mobile.src }}" alt="{{ project.showcase.mobile.alt }}" loading="lazy" />
+                            </div>
+                          </div>
                         </div>
                       {% endif %}
                     </div>

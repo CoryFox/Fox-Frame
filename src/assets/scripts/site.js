@@ -20,4 +20,26 @@ document.addEventListener("DOMContentLoaded", () => {
       Collapse.getOrCreateInstance(nav).hide();
     });
   });
+
+  document.querySelectorAll("[data-showcase]").forEach((wrap) => {
+    const tabs = wrap.querySelectorAll("[data-showcase-tab]");
+    const panes = wrap.querySelectorAll("[data-showcase-pane]");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = tab.getAttribute("data-showcase-target");
+        tabs.forEach((t) => {
+          t.classList.remove("is-active");
+          t.setAttribute("aria-selected", "false");
+        });
+        tab.classList.add("is-active");
+        tab.setAttribute("aria-selected", "true");
+
+        panes.forEach((pane) => {
+          const isActive = pane.getAttribute("data-showcase-pane") === target;
+          pane.classList.toggle("is-active", isActive);
+        });
+      });
+    });
+  });
 });
