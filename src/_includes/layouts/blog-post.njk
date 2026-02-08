@@ -28,27 +28,56 @@ layout: layouts/base.njk
   <section class="section">
     <div class="container">
       <a class="btn btn-link px-0 mb-3" href="/blog/"><i class="bi bi-arrow-left me-2"></i>Back to blog</a>
-      <div class="row g-4 align-items-start blog-header">
-        <div class="col-lg-7 order-2 order-lg-1">
-          <h1 class="display-6 fw-semibold mb-2">{{ title }}</h1>
-          {% if description %}
-            <p class="lead text-muted mb-3">{{ description }}</p>
-          {% endif %}
-          {% if dateDisplay %}
-            <div class="small text-muted mb-0">Published {{ dateDisplay }}</div>
-          {% endif %}
-        </div>
-        {% if thumbnail %}
-          <div class="col-lg-5 order-1 order-lg-2">
-            <div class="blog-hero-media">
-              <img src="{{ thumbnail | urlFor }}" alt="{{ thumbnailAlt }}" class="w-100 rounded-3 blog-hero-img blog-hero-img--{{ thumbnailFit or 'cover' }}" loading="lazy" />
-            </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="blog-header">
+            <h1 class="display-6 fw-semibold mb-2">{{ title }}</h1>
+            {% if description %}
+              <p class="lead text-muted mb-3">{{ description }}</p>
+            {% endif %}
+            {% if dateDisplay %}
+              <div class="small text-muted mb-3">Published {{ dateDisplay }}</div>
+            {% endif %}
+            {% if thumbnail %}
+              <div class="blog-hero-media mb-4">
+                <img src="{{ thumbnail | urlFor }}" alt="{{ thumbnailAlt }}" class="w-100 rounded-3 blog-hero-img blog-hero-img--{{ thumbnailFit or 'cover' }}" loading="lazy" />
+              </div>
+            {% endif %}
           </div>
-        {% endif %}
+          <article class="content blog-post">
+            {{ content | safe }}
+          </article>
+        </div>
       </div>
-      <article class="mt-3 content blog-post">
-        {{ content | safe }}
-      </article>
+      {% include "partials/blog-cta.njk" %}
+      <div class="mt-5">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h2 class="h4 fw-semibold mb-0">Related posts</h2>
+          <a class="btn btn-sm btn-outline-secondary" href="/blog/">View all</a>
+        </div>
+        <div class="row g-3">
+          {% set relatedCount = 0 %}
+          {% for post in collections.blog %}
+            {% if post.url != page.url and relatedCount < 3 %}
+              <div class="col-md-6 col-lg-4">
+                <a class="card card-soft h-100 hover-rise blog-card blog-card--link" href="{{ post.url }}">
+                  {% if post.data.thumbnail %}
+                    <img src="{{ post.data.thumbnail | urlFor }}" class="card-img-top blog-card__img" alt="{{ post.data.thumbnailAlt }}" loading="lazy" />
+                  {% endif %}
+                  <div class="card-body">
+                    <h3 class="h6 mb-2">{{ post.data.title }}</h3>
+                    {% if post.data.summary %}
+                      <p class="text-muted mb-3">{{ post.data.summary }}</p>
+                    {% endif %}
+                    <span class="btn btn-sm btn-primary">Read article</span>
+                  </div>
+                </a>
+              </div>
+              {% set relatedCount = relatedCount + 1 %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </section>
 </main>

@@ -1,0 +1,48 @@
+{% set ctaTitle = ctaTitle or "Ready to stand out locally?" %}
+{% set ctaBody = ctaBody or "Get a premium, consistent brand presence and a site that makes it easy for customers to choose you. We reply within 48 hours (Mon to Fri)." %}
+<div class="mt-5 pt-4 border-top">
+  <div class="row justify-content-center g-4">
+    <div class="col-lg-7">
+      <div class="text-center mb-4">
+        <h2 class="h3 fw-semibold mb-2">{{ ctaTitle }}</h2>
+        <p class="text-muted mb-0">{{ ctaBody }}</p>
+      </div>
+      <div class="card card-soft">
+        <div class="card-body p-4 p-md-5">
+          <h3 class="h5 fw-semibold mb-3">Send a message</h3>
+          <form id="blog-contact" action="https://formspree.io/f/mjgebrkq" method="post" class="row g-3" novalidate>
+          <input type="hidden" name="_subject" value="New enquiry – Fox & Frame Studio" />
+            <div class="col-md-6">
+              <label class="form-label" for="name">Name</label>
+              <input class="form-control" id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="business">Business name</label>
+              <input class="form-control" id="business" name="business" type="text" autocomplete="organization" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-control" id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="phone">Phone (optional)</label>
+              <input class="form-control" id="phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="message">What do you need help with?</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+              <div class="form-text">
+                Helpful to include: your current site (if any), what you do, and what you want the website to achieve.
+              </div>
+            </div>
+            <div class="col-12 d-flex flex-column flex-sm-row gap-2 align-items-sm-center justify-content-between">
+              <button class="btn btn-primary btn-lg" type="submit">Send message</button>
+              <span class="small text-muted">Reply within 48 hours (Mon to Fri)</span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <p class="small text-muted mt-3 mb-0">By submitting this form, you agree to our <a href="/privacy.html" class="link-secondary">Privacy Policy</a>.</p>
+    </div>
+  </div>
+</div>
