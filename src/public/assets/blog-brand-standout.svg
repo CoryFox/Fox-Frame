@@ -1,0 +1,15 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brand that stands out">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7F1EA" />
+      <stop offset="100%" stop-color="#EDE2D6" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)" />
+  <rect x="120" y="150" width="960" height="375" rx="24" fill="#FFFFFF" stroke="#E8D9C8" />
+  <rect x="170" y="220" width="140" height="12" rx="6" fill="#C9A77D" />
+  <rect x="170" y="245" width="220" height="12" rx="6" fill="#D8C1A5" />
+  <text x="170" y="330" font-family="Playfair Display, Georgia, serif" font-size="56" fill="#3B2C1D">Brand that stands out</text>
+  <text x="170" y="395" font-family="Inter, Arial, sans-serif" font-size="28" fill="#5A4A38">Consistency builds trust locally</text>
+  <circle cx="980" cy="520" r="70" fill="#E2C9A9" />
+</svg>

@@ -1,0 +1,15 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fox and Frame Studio introduction">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F6F7F4" />
+      <stop offset="100%" stop-color="#E6EFEA" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)" />
+  <circle cx="980" cy="120" r="90" fill="#CFE3DA" />
+  <circle cx="180" cy="560" r="120" fill="#DCE9E2" />
+  <rect x="110" y="160" width="980" height="355" rx="24" fill="#FFFFFF" stroke="#E2E8E3" />
+  <text x="170" y="260" font-family="Playfair Display, Georgia, serif" font-size="52" fill="#1D2A25">Introducing</text>
+  <text x="170" y="330" font-family="Playfair Display, Georgia, serif" font-size="64" fill="#1D2A25">Fox and Frame</text>
+  <text x="170" y="395" font-family="Inter, Arial, sans-serif" font-size="28" fill="#456055">Small business websites, done properly</text>
+</svg>

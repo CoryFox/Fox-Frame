@@ -124,6 +124,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 576px) {
+  .blog-card .card-body {
+    padding: 18px;
+  }
+  .blog-post p,
+  .blog-post li {
+    font-size: 1rem;
+  }
+  .blog-hero-media {
+    padding: 8px;
+  }
+}
+
 .bg-surface {
   background: #EEF5F5; /* Very light tint for alternate sections */
 }
@@ -250,6 +263,65 @@ h1, h2, h3, h4, h5, h6 {
   background: #ffffff;
   /* Deeper shadow for a more premium, elevated feel */
   box-shadow: 0 12px 32px rgba(31, 41, 51, 0.05);
+}
+
+/* Blog cards */
+.blog-card {
+  overflow: hidden;
+}
+
+.blog-card--link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.blog-card--link:hover,
+.blog-card--link:focus {
+  text-decoration: none;
+}
+
+.blog-card--link:focus-visible {
+  outline: 3px solid rgba(58, 111, 115, 0.35);
+  outline-offset: 2px;
+}
+
+.blog-card__img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.blog-card .card-body {
+  padding: 22px;
+}
+
+.blog-card .card-body p {
+  line-height: 1.6;
+}
+
+.blog-card h2,
+.blog-card h3 {
+  line-height: 1.2;
+}
+
+.blog-hero-img {
+  box-shadow: 0 12px 30px rgba(31, 41, 51, 0.08);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.blog-hero-media {
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--border-soft);
+  padding: 10px;
+  box-shadow: 0 12px 30px rgba(31, 41, 51, 0.06);
+}
+
+.blog-hero-img--contain {
+  object-fit: contain;
+  background: #f8faf9;
 }
 
 /* Icon circles */
@@ -833,6 +905,40 @@ h1, h2, h3, h4, h5, h6 {
 .faq-item:focus-within {
   box-shadow: 0 0 0 3px rgba(58, 111, 115, 0.18), 0 12px 30px rgba(31, 41, 51, 0.06);
   border-color: rgba(58, 111, 115, 0.35);
+}
+
+/* Blog post typography */
+.blog-post {
+  max-width: 72ch;
+}
+
+.blog-post p,
+.blog-post li {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.blog-post h2 {
+  margin-top: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.blog-post h3 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.blog-post ul {
+  padding-left: 1.2rem;
+}
+
+.blog-post a {
+  color: var(--accent-main);
+}
+
+.blog-post a:hover,
+.blog-post a:focus {
+  text-decoration: underline;
 }
 
 .footer a {
