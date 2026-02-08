@@ -1,0 +1,36 @@
+name: Minify and Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - name: Install minify CLI
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y minify
+      - name: Copy repository into dist directory
+        run: |
+          mkdir -p dist
+          rsync -a --exclude='.git' . dist/
+      - name: Minify HTML files
+        run: |
+          find dist -type f -name '*.html' -print0 | xargs -0 -n1 -P4 sh -c 'minify "$0" > "$0.tmp" && mv "$0.tmp" "$0"'
+      - name: Minify CSS files
+        run: |
+          find dist -type f -name '*.css' -print0 | xargs -0 -n1 -P4 sh -c 'minify "$0" > "$0.tmp" && mv "$0.tmp" "$0"'
+      - name: Minify JavaScript files
+        run: |
+          find dist -type f -name '*.js' -print0 | xargs -0 -n1 -P4 sh -c 'minify "$0" > "$0.tmp" && mv "$0.tmp" "$0"'
+      - name: Upload minified site artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: site-dist
+          path: dist
