@@ -9,6 +9,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
 
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+<!-- Prevent flash of unstyled content -->
+<style>
+  body{opacity:0;transition:opacity 450ms ease}
+  body.is-ready{opacity:1}
+  .page-loader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#F6F7F4;z-index:2000;opacity:1;transition:opacity 450ms ease}
+  .page-loader.is-hidden{opacity:0;pointer-events:none}
+  .page-loader__inner{display:flex;flex-direction:column;align-items:center;gap:16px}
+  .page-loader__logo{width:140px;max-width:60vw}
+  .page-loader__spinner{width:40px;height:40px;border-radius:50%;border:3px solid rgba(58,111,115,.25);border-top-color:#3A6F73;animation:ff-spin 900ms linear infinite}
+  @keyframes ff-spin{to{transform:rotate(360deg)}}
+</style>
+
 <!-- Vite bundles -->
 {% if vite.isDev %}
   <script type="module" src="{{ vite.devServer }}/@vite/client"></script>

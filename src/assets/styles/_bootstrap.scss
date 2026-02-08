@@ -1,0 +1,20 @@
+// Bootstrap overrides (modern @use with config)
+
+@use "bootstrap/scss/bootstrap" with (
+  $primary: #3A6F73,
+  $secondary: #C47A45,
+  $body-bg: #F6F7F4,
+  $body-color: #1F2933,
+  $text-muted: #6B7280,
+  $border-color: #D1D5DB,
+  $link-color: #3A6F73,
+  $link-hover-color: #2E585B,
+  $font-family-sans-serif: ("Inter", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif),
+  $headings-font-family: ("Playfair Display", "Times New Roman", Times, serif),
+  $btn-border-radius: 0.9rem,
+  $btn-border-radius-sm: 0.7rem,
+  $btn-border-radius-lg: 1rem,
+  $card-border-radius: 1.25rem,
+  $navbar-padding-y: 0.75rem,
+  $navbar-toggler-border-radius: 0.9rem
+);
