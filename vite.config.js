@@ -20,8 +20,8 @@ module.exports = {
     }
   },
   build: {
-    outDir: "dist",
-    emptyOutDir: false,
+    outDir: "dist-vite",
+    emptyOutDir: true,
     manifest: true,
     assetsDir: "assets",
     rollupOptions: {

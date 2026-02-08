@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently -k \"vite\" \"cross-env ELEVENTY_ENV=development VITE_DEV_SERVER_URL=http://localhost:5173 eleventy --serve\"",
-    "build": "vite build && cross-env ELEVENTY_ENV=production eleventy",
+    "build": "vite build && node scripts/check-manifest.mjs && cross-env ELEVENTY_ENV=production eleventy && node scripts/copy-vite.mjs",
     "start": "npm run dev",
     "clean": "rm -rf dist",
     "capture": "node scripts/capture-demos.mjs"
