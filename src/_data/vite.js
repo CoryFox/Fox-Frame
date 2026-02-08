@@ -6,7 +6,7 @@ const devServer = process.env.VITE_DEV_SERVER_URL || "http://localhost:5173";
 
 let manifest = {};
 if (!isDev) {
-  const manifestPath = path.resolve("dist/assets/manifest.json");
+  const manifestPath = path.resolve("dist/manifest.json");
   if (fs.existsSync(manifestPath)) {
     manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
   }

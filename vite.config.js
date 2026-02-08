@@ -20,9 +20,10 @@ module.exports = {
     }
   },
   build: {
-    outDir: "dist/assets",
-    emptyOutDir: true,
+    outDir: "dist",
+    emptyOutDir: false,
     manifest: true,
+    assetsDir: "assets",
     rollupOptions: {
       input: resolve("src/assets/main.js")
     }
