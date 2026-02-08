@@ -1,0 +1,86 @@
+[
+  {
+    "key": "nyf",
+    "title": "New You Fitness",
+    "subtitle": "Premium personal trainer funnel with a lead magnet and booking flow.",
+    "url": "ff_nyf_demo/index.html",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": ["Lead magnet", "Calendar booking"],
+    "bullets": [
+      "High-impact hero built for conversions",
+      "Lead magnet download flow (PDF)",
+      "Calendar booking section"
+    ],
+    "result": "A focused journey from first click to captured lead, ready for ads and socials.",
+    "showcase": {
+      "images": [
+        { "src": "assets/showcase-nyf-1.png", "alt": "New You Fitness, desktop style preview" },
+        { "src": "assets/showcase-nyf-2.png", "alt": "New You Fitness, lead magnet flow preview" }
+      ],
+      "mobile": { "src": "assets/showcase-nyf-mobile.png", "alt": "New You Fitness, mobile style preview" }
+    }
+  },
+  {
+    "key": "quotehound",
+    "title": "QuoteHound",
+    "subtitle": "Insurance quote funnel with multi-step flow and clear trust messaging.",
+    "url": "QuoteHound1_demo/quotehound1.html",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": ["Lead capture", "Multi-step"],
+    "bullets": [
+      "Step-by-step quote capture flow",
+      "Strong trust and reassurance blocks",
+      "Clean form layout with progress cues"
+    ],
+    "result": "Designed to reduce drop-off and encourage completed quote submissions.",
+    "showcase": {
+      "images": [
+        { "src": "assets/showcase-quotehound-1.png", "alt": "QuoteHound, desktop style preview" },
+        { "src": "assets/showcase-quotehound-2.png", "alt": "QuoteHound, quote journey preview" }
+      ],
+      "mobile": { "src": "assets/showcase-quotehound-mobile.png", "alt": "QuoteHound, mobile style preview" }
+    }
+  },
+  {
+    "key": "savewise",
+    "title": "SaveWise",
+    "subtitle": "Insurance product landing page with benefits-led layout and fast enquiry route.",
+    "url": "savewise_demo/index.html",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": ["Benefit-led", "Fast enquiry"],
+    "bullets": [
+      "Value-led hero and benefit panels",
+      "Clear comparison and eligibility cues",
+      "Focused CTA placement"
+    ],
+    "result": "Simplifies product understanding and guides users to the next step quickly.",
+    "showcase": {
+      "images": [
+        { "src": "assets/showcase-savewise-1.png", "alt": "SaveWise, desktop style preview" },
+        { "src": "assets/showcase-savewise-2.png", "alt": "SaveWise, benefits and features preview" }
+      ],
+      "mobile": { "src": "assets/showcase-savewise-mobile.png", "alt": "SaveWise, mobile style preview" }
+    }
+  },
+  {
+    "key": "mpc",
+    "title": "My PMI Cover",
+    "subtitle": "Private medical insurance lead-gen site with modern editorial layout.",
+    "url": "mypmicover_demo/index.html",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": ["Editorial", "Lead-gen"],
+    "bullets": [
+      "Trust-first layout with authority content",
+      "Structured sections for plan clarity",
+      "Clean, minimal enquiry route"
+    ],
+    "result": "Positions the service as premium and trustworthy while keeping the path to enquire simple.",
+    "showcase": {
+      "images": [
+        { "src": "assets/showcase-mpc-1.png", "alt": "My PMI Cover, desktop style preview" },
+        { "src": "assets/showcase-mpc-2.png", "alt": "My PMI Cover, plan and trust blocks preview" }
+      ],
+      "mobile": { "src": "assets/showcase-mpc-mobile.png", "alt": "My PMI Cover, mobile style preview" }
+    }
+  }
+]

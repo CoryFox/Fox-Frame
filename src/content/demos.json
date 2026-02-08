@@ -1,33 +1,11 @@
 {
-  "trades": {
-    "key": "trades",
-    "category": "Service",
-    "title": "Local Trades Website",
-    "subtitle": "Plumbing and heating demo build",
-    "tags": ["Design", "Speed", "Enquiries"],
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "showcase": {
-      "images": [
-        { "src": "assets/showcase-trades-1.png", "alt": "Trades demo, desktop style preview" },
-        { "src": "assets/showcase-trades-2.png", "alt": "Trades demo, service and trust blocks preview" }
-      ],
-      "mobile": { "src": "assets/showcase-trades-mobile.png", "alt": "Trades demo, mobile style preview" }
-    },
-    "url": "ff_trades_demo/index.html",
-    "overview": "A clean, mobile-first build for local trades. Clear service scannability, trust blocks, click-to-call, and a friction-free quote request.",
-    "notes": [
-      "One clear CTA with click-to-call",
-      "Trust stack (reviews, service areas, accreditations)",
-      "Short quote form with fast confirmation"
-    ]
-  },
   "nyf": {
     "key": "nyf",
     "category": "Fitness",
     "title": "New You Fitness",
     "subtitle": "Premium PT landing page with lead magnet and booking",
     "tags": ["Brand", "Lead magnet", "Booking"],
-    "tech": ["Tailwind CSS", "JavaScript", "HTML"],
+    "tech": ["HTML", "CSS", "JavaScript"],
     "showcase": {
       "images": [
         { "src": "assets/showcase-nyf-1.png", "alt": "New You Fitness demo, desktop style preview" },
@@ -41,6 +19,72 @@
       "High-impact hero with transformation messaging",
       "Lead magnet flow, PDF download, simple form",
       "Booking section with clear expectations and next steps"
+    ]
+  },
+  "quotehound": {
+    "key": "quotehound",
+    "category": "Insurance",
+    "title": "QuoteHound",
+    "subtitle": "Multi-step insurance quote funnel",
+    "tags": ["Lead capture", "Multi-step"],
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "showcase": {
+      "images": [
+        { "src": "assets/showcase-quotehound-1.png", "alt": "QuoteHound demo, desktop style preview" },
+        { "src": "assets/showcase-quotehound-2.png", "alt": "QuoteHound demo, quote journey preview" }
+      ],
+      "mobile": { "src": "assets/showcase-quotehound-mobile.png", "alt": "QuoteHound demo, mobile style preview" }
+    },
+    "url": "QuoteHound1_demo/quotehound1.html",
+    "overview": "A structured quote journey with trust cues, progress indication, and a clean multi-step flow.",
+    "notes": [
+      "Step-by-step quote capture flow",
+      "Trust and reassurance blocks",
+      "Clear progress cues"
+    ]
+  },
+  "savewise": {
+    "key": "savewise",
+    "category": "Insurance",
+    "title": "SaveWise",
+    "subtitle": "Benefits-led insurance landing page",
+    "tags": ["Benefit-led", "Fast enquiry"],
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "showcase": {
+      "images": [
+        { "src": "assets/showcase-savewise-1.png", "alt": "SaveWise demo, desktop style preview" },
+        { "src": "assets/showcase-savewise-2.png", "alt": "SaveWise demo, benefits and features preview" }
+      ],
+      "mobile": { "src": "assets/showcase-savewise-mobile.png", "alt": "SaveWise demo, mobile style preview" }
+    },
+    "url": "savewise_demo/index.html",
+    "overview": "A clean product layout that prioritises benefits, eligibility, and fast contact routes.",
+    "notes": [
+      "Value-led hero and benefits",
+      "Eligibility cues and comparisons",
+      "Focused CTA placement"
+    ]
+  },
+  "mpc": {
+    "key": "mpc",
+    "category": "Insurance",
+    "title": "My PMI Cover",
+    "subtitle": "Premium medical insurance lead-gen",
+    "tags": ["Editorial", "Lead-gen"],
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "showcase": {
+      "images": [
+        { "src": "assets/showcase-mpc-1.png", "alt": "My PMI Cover demo, desktop style preview" },
+        { "src": "assets/showcase-mpc-2.png", "alt": "My PMI Cover demo, plan and trust blocks preview" }
+      ],
+      "mobile": { "src": "assets/showcase-mpc-mobile.png", "alt": "My PMI Cover demo, mobile style preview" }
+    },
+    "url": "mypmicover_demo/index.html",
+    "overview": "A premium, editorial-style layout that builds trust and guides enquiries.",
+    "notes": [
+      "Trust-first layout with authority content",
+      "Clear sectioning for plan clarity",
+      "Minimal, focused enquiry path"
     ]
   }
 }

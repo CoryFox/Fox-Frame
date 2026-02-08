@@ -452,13 +452,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Showcase media for portfolio cards */
 .showcase {
-  position: relative;
-  display: block;
+  display: grid;
+  gap: 16px;
 }
 
 @media (min-width: 768px) {
   .showcase {
-    padding-right: 0;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    align-items: end;
   }
 }
 
@@ -502,14 +503,8 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 12px 30px rgba(31, 41, 51, 0.06);
 }
 
-@media (min-width: 768px) {
-  .showcase-mobile {
-    position: absolute;
-    right: 14px;
-    bottom: 14px;
-    width: 190px;
-    transform: translateZ(0);
-  }
+.showcase-mobile {
+  width: 100%;
 }
 
 .showcase-mobile img {

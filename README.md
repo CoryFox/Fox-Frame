@@ -27,6 +27,18 @@ npm run build
 
 The production output is written to `dist/`.
 
+## Capture Demo Screenshots
+
+This repo includes a script to generate the demo showcase and hero images.
+
+```bash
+npm install -D playwright
+npx playwright install chromium
+npm run capture
+```
+
+Screenshots are written to `src/public/assets/`.
+
 ## Structure
 
 - `src/` – templates, content, and source assets
