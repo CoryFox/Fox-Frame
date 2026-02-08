@@ -1,94 +1,52 @@
-<!doctype html>
-<html lang="en-GB">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Fox &amp; Frame Studio – Straightforward Websites in South Yorkshire</title>
-    <meta name="description" content="Fox & Frame Studio provides straightforward web design for small businesses and trades in South Yorkshire. Clear websites, honest pricing, and ongoing support." />
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="manifest" href="assets/site.webmanifest">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"/>
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css"/>
-
-    <!-- Structured data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Organization",
-            "@id": "https://foxandframe.design/#organization",
-            "name": "Fox & Frame Studio",
-            "url": "https://foxandframe.design/",
-            "email": "hello@foxandframe.design",
-            "logo": "https://foxandframe.design/assets/logo2LightBG.png"
-          },
-          {
-            "@type": "WebSite",
-            "name": "Fox & Frame Studio",
-            "url": "https://foxandframe.design/",
-            "publisher": {
-              "@id": "https://foxandframe.design/#organization"
-            }
-          },
-          {
-            "@type": "LocalBusiness",
-            "@id": "https://foxandframe.design/#organization",
-            "name": "Fox & Frame Studio",
-            "url": "https://foxandframe.design/",
-            "email": "hello@foxandframe.design",
-            "image": "https://foxandframe.design/assets/logo2LightBG.png",
-            "areaServed": "GB",
-            "knowsAbout": [
-              "Web design",
-              "Website development",
-              "Website support",
-              "Hosting and maintenance"
-            ]
+---
+layout: layouts/base.njk
+title: Fox & Frame Studio – Straightforward Websites in South Yorkshire
+titleSuffix: false
+description: Fox & Frame Studio provides straightforward web design for small businesses and trades in South Yorkshire. Clear websites, honest pricing, and ongoing support.
+bodyAttrs: 'data-bs-spy="scroll" data-bs-target="#topNav" data-bs-smooth-scroll="true" tabindex="0"'
+headExtras: |
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://foxandframe.design/#organization",
+          "name": "Fox & Frame Studio",
+          "url": "https://foxandframe.design/",
+          "email": "hello@foxandframe.design",
+          "logo": "https://foxandframe.design/assets/logo2LightBG.png"
+        },
+        {
+          "@type": "WebSite",
+          "name": "Fox & Frame Studio",
+          "url": "https://foxandframe.design/",
+          "publisher": {
+            "@id": "https://foxandframe.design/#organization"
           }
-        ]
-      }
-    </script>
-    <script data-goatcounter="https://foxandframe.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-  </head>
-  <body data-bs-spy="scroll" data-bs-target="#topNav" data-bs-smooth-scroll="true" tabindex="0">
-    <a class="visually-hidden-focusable skip-link" href="#main">Skip to content</a>
-    <!-- Navbar -->
-    <nav id="topNav" class="navbar navbar-expand-lg sticky-top">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
-          <img src="assets/logo2LightBG.png" alt="Fox &amp; Frame Studio logo" width="175" class="d-inline-block align-text-top"/>
-        </a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navContent">
-          <!-- Reordered navigation to match page flow: services, work, pricing, demos, feedback, FAQ, about, contact -->
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
-            <li class="nav-item"><a class="nav-link" href="#testimonials">Feedback</a></li>
-            <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-          </ul>
-          <div class="ms-lg-3 d-grid d-lg-block">
-            <a class="btn btn-primary" href="#contact">Contact Us</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <main id="main">
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://foxandframe.design/#organization",
+          "name": "Fox & Frame Studio",
+          "url": "https://foxandframe.design/",
+          "email": "hello@foxandframe.design",
+          "image": "https://foxandframe.design/assets/logo2LightBG.png",
+          "areaServed": "GB",
+          "knowsAbout": [
+            "Web design",
+            "Website development",
+            "Website support",
+            "Hosting and maintenance"
+          ]
+        }
+      ]
+    }
+  </script>
+  <script data-goatcounter="https://foxandframe.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+---
+
+<main id="main">
       <!-- Hero Section -->
       <header id="top" class="section hero">
         <div class="container">
@@ -128,17 +86,17 @@
                   <div class="carousel-inner rounded-3 overflow-hidden shadow-sm">
                     <div class="carousel-item active">
                       <div class="mockup-frame">
-                        <img src="assets/hero-savewise-full.png" class="d-block w-100" alt="Insurance demo hero" loading="lazy" style="height: 260px; object-fit: cover; object-position: top;" />
+                        <img src="/assets/hero-savewise-full.png" class="d-block w-100" alt="Insurance demo hero" loading="lazy" style="height: 260px; object-fit: cover; object-position: top;" />
                       </div>
                     </div>
                     <div class="carousel-item">
                       <div class="mockup-frame">
-                        <img src="assets/hero-over50-full.png" class="d-block w-100" alt="Over 50s life insurance demo" loading="lazy" style="height: 260px; object-fit: cover; object-position: top;" />
+                        <img src="/assets/hero-over50-full.png" class="d-block w-100" alt="Over 50s life insurance demo" loading="lazy" style="height: 260px; object-fit: cover; object-position: top;" />
                       </div>
                     </div>
                     <div class="carousel-item">
                       <div class="mockup-frame">
-                        <img src="assets/hero-trades-full.png" class="d-block w-100" alt="Trades demo hero" loading="lazy" style="height: 260px; object-fit: cover; object-position: top;" />
+                        <img src="/assets/hero-trades-full.png" class="d-block w-100" alt="Trades demo hero" loading="lazy" style="height: 260px; object-fit: cover; object-position: top;" />
                       </div>
                     </div>
                   </div>
@@ -453,10 +411,10 @@
                       <div id="ffCarouselTrades" class="carousel slide ff-showcase-carousel" data-bs-ride="false">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img src="assets/showcase-trades-1.png" class="d-block w-100" alt="Rotherham Plumbing, desktop style preview" loading="lazy"/>
+                            <img src="/assets/showcase-trades-1.png" class="d-block w-100" alt="Rotherham Plumbing, desktop style preview" loading="lazy"/>
                           </div>
                           <div class="carousel-item">
-                            <img src="assets/showcase-trades-2.png" class="d-block w-100" alt="Rotherham Plumbing, service and trust blocks preview" loading="lazy"/>
+                            <img src="/assets/showcase-trades-2.png" class="d-block w-100" alt="Rotherham Plumbing, service and trust blocks preview" loading="lazy"/>
                           </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#ffCarouselTrades" data-bs-slide="prev" aria-label="Previous">
@@ -468,7 +426,7 @@
                       </div>
                     </div>
                     <div class="showcase-mobile d-none d-md-block">
-                      <img src="assets/showcase-trades-mobile.png" alt="Rotherham Plumbing, mobile style preview" loading="lazy"/>
+                      <img src="/assets/showcase-trades-mobile.png" alt="Rotherham Plumbing, mobile style preview" loading="lazy"/>
                     </div>
                   </div>
                   <div class="project-header">
@@ -512,10 +470,10 @@
                       <div id="ffCarouselNYF" class="carousel slide ff-showcase-carousel" data-bs-ride="false">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img src="assets/showcase-nyf-1.png" class="d-block w-100" alt="New You Fitness, desktop style preview" loading="lazy"/>
+                            <img src="/assets/showcase-nyf-1.png" class="d-block w-100" alt="New You Fitness, desktop style preview" loading="lazy"/>
                           </div>
                           <div class="carousel-item">
-                            <img src="assets/showcase-nyf-2.png" class="d-block w-100" alt="New You Fitness, lead magnet flow preview" loading="lazy"/>
+                            <img src="/assets/showcase-nyf-2.png" class="d-block w-100" alt="New You Fitness, lead magnet flow preview" loading="lazy"/>
                           </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#ffCarouselNYF" data-bs-slide="prev" aria-label="Previous">
@@ -527,7 +485,7 @@
                       </div>
                     </div>
                     <div class="showcase-mobile d-none d-md-block">
-                      <img src="assets/showcase-nyf-mobile.png" alt="New You Fitness, mobile style preview" loading="lazy"/>
+                      <img src="/assets/showcase-nyf-mobile.png" alt="New You Fitness, mobile style preview" loading="lazy"/>
                     </div>
                   </div>
                   <div class="project-header">
@@ -913,34 +871,9 @@
           </div>
         </div>
       </section>
-      <!-- Footer -->
-      <footer class="footer border-top">
-        <div class="container py-4">
-          <div class="row g-3 align-items-center">
-            <div class="col-md-6">
-              <div class="d-flex align-items-center gap-2">
-                <span class="brand-mark" aria-hidden="true"></span>
-                <span class="fw-semibold">Fox &amp; Frame Studio</span>
-              </div>
-              <div class="small text-muted mt-1">
-                Web design and support for small businesses, South Yorkshire, UK
-              </div>
-            </div>
-            <div class="col-md-6 text-md-end">
-              <div class="small text-muted">
-                © <span id="year"></span> Fox &amp; Frame Studio
-                <span class="mx-2">|</span>
-                <a class="link-secondary" href="/privacy.html">Privacy</a>
-                <span class="mx-2">|</span>
-                <a class="link-secondary" href="/terms.html">Terms</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
 
-    <!-- Demo preview modal -->
+<!-- Demo preview modal -->
     <div class="modal fade" id="ffDemoModal" tabindex="-1" aria-labelledby="ffDemoModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content ff-modal">
@@ -995,25 +928,3 @@
         </div>
       </div>
     </div>
-
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="demos-data.js"></script>
-    <script src="demo-viewer.js"></script>
-    <!-- Scroll animations for subtle fades on scroll -->
-    <script src="scroll-animations.js"></script>
-    <script>
-      // Update year in footer
-      document.getElementById("year").textContent = new Date().getFullYear();
-      // Collapse navbar on link click (mobile)
-      document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
-        link.addEventListener("click", () => {
-          const nav = document.getElementById("navContent");
-          if (nav.classList.contains("show")) {
-            bootstrap.Collapse.getOrCreateInstance(nav).hide();
-          }
-        });
-      });
-    </script>
-  </body>
-</html>

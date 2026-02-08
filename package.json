@@ -1,0 +1,19 @@
+{
+  "name": "fox-frame",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"cross-env ELEVENTY_ENV=development VITE_DEV_SERVER_URL=http://localhost:5173 eleventy --serve\"",
+    "build": "vite build && cross-env ELEVENTY_ENV=production eleventy",
+    "start": "npm run dev",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "sass": "^1.77.8",
+    "vite": "^5.4.14"
+  }
+}

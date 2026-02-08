@@ -1,0 +1,26 @@
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Vite bundles -->
+{% if vite.isDev %}
+  <script type="module" src="{{ vite.devServer }}/@vite/client"></script>
+  <script type="module" src="{{ vite.devServer }}/src/assets/main.js"></script>
+{% else %}
+  {% set entry = vite.asset('src/assets/main.js') %}
+  {% if entry.css %}
+    {% for cssFile in entry.css %}
+      <link rel="stylesheet" href="/{{ cssFile }}" />
+    {% endfor %}
+  {% endif %}
+  {% if entry.file %}
+    <script type="module" src="/{{ entry.file }}"></script>
+  {% endif %}
+{% endif %}

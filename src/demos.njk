@@ -1,0 +1,120 @@
+---
+layout: layouts/base.njk
+title: Demo sites
+description: Preview demo sites built by Fox & Frame Studio.
+navVariant: demos
+footer: false
+permalink: demos.html
+---
+<main id="main">
+  <header class="section">
+    <div class="container">
+      <div class="row align-items-end g-4">
+        <div class="col-lg-8">
+          <p class="text-uppercase small text-muted mb-2">Preview</p>
+          <h1 class="display-6 fw-semibold mb-2">Demo sites</h1>
+          <p class="text-muted mb-0">A quick way to preview builds. Each demo has a desktop and mobile view.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a class="btn btn-outline-secondary" href="/index.html#work"><i class="bi bi-arrow-left me-2"></i>Back to work</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section pt-0">
+    <div class="container">
+      <div class="row g-3" id="ffDemoGrid">
+        {% if demos.grouped | length == 0 %}
+          <div class="col-12">
+            <div class="card card-soft">
+              <div class="card-body p-4">No demos added yet.</div>
+            </div>
+          </div>
+        {% else %}
+          {% for group in demos.grouped %}
+            <div class="col-12"><h2 class="h5 fw-bold mt-4 mb-3">{{ group.category }}</h2></div>
+            {% for d in group.items %}
+              <div class="col-lg-6">
+                <div class="card card-soft h-100 hover-rise">
+                  <div class="card-body p-4 p-md-5">
+                    <p class="text-uppercase small text-muted mb-2">Demo</p>
+
+                    {% if d.showcase and d.showcase.images and (d.showcase.images | length) > 0 %}
+                      <div class="showcase mb-4">
+                        <div class="showcase-main">
+                          <div id="ffDemoCarousel-{{ d.key }}" class="carousel slide ff-showcase-carousel" data-bs-ride="false">
+                            <div class="carousel-inner">
+                              {% for img in d.showcase.images %}
+                                <div class="carousel-item{% if loop.first %} active{% endif %}">
+                                  <img src="/{{ img.src }}" class="d-block w-100" alt="{{ img.alt or 'Demo preview' }}" loading="lazy" />
+                                </div>
+                              {% endfor %}
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#ffDemoCarousel-{{ d.key }}" data-bs-slide="prev" aria-label="Previous">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#ffDemoCarousel-{{ d.key }}" data-bs-slide="next" aria-label="Next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                          </div>
+                        </div>
+                        {% if d.showcase.mobile %}
+                          <div class="showcase-mobile d-none d-md-block">
+                            <img src="/{{ d.showcase.mobile.src }}" alt="{{ d.showcase.mobile.alt or 'Mobile preview' }}" loading="lazy" />
+                          </div>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+
+                    <h2 class="h4 fw-semibold mb-1">{{ d.title }}</h2>
+                    <p class="text-muted mb-3">{{ d.subtitle }}</p>
+                    <div class="d-flex flex-wrap gap-2 mb-2">
+                      {% for t in d.tags %}
+                        <span class="chip">{{ t }}</span>
+                      {% endfor %}
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                      {% for t in d.tech %}
+                        <span class="chip chip-tech">{{ t }}</span>
+                      {% endfor %}
+                    </div>
+                    <p class="mb-4">{{ d.overview }}</p>
+                    <div class="d-flex flex-wrap gap-2">
+                      <a class="btn btn-primary" target="_blank" rel="noopener" href="/{{ d.url }}"><i class="bi bi-box-arrow-up-right me-2"></i>View site</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 border-top bg-white">
+    <div class="container">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center gap-2">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="fw-semibold">Fox &amp; Frame Studio</span>
+          </div>
+          <div class="small text-muted mt-1">
+            Web design and support for small businesses, South Yorkshire, UK
+          </div>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="small text-muted">
+            © <span data-year></span> Fox &amp; Frame Studio
+            <span class="mx-2">|</span>
+            <a class="link-secondary" href="/privacy.html">Privacy</a>
+            <span class="mx-2">|</span>
+            <a class="link-secondary" href="/terms.html">Terms</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>

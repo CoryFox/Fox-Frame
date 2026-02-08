@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }}{% if titleSuffix != false %} – {{ titleSuffix or site.titleSuffix }}{% endif %}</title>
+    <meta name="description" content="{{ description }}" />
+
+    {% include "partials/head.njk" %}
+
+    {% if headExtras %}
+      {{ headExtras | safe }}
+    {% endif %}
+  </head>
+  <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}{% if bodyAttrs %} {{ bodyAttrs | safe }}{% endif %}>
+    {% if skipLink != false %}
+      <a class="visually-hidden-focusable skip-link" href="#main">Skip to content</a>
+    {% endif %}
+
+    {% if nav != false %}
+      {% include "partials/nav.njk" %}
+    {% endif %}
+
+    {{ content | safe }}
+
+    {% if footer != false %}
+      {% include "partials/footer.njk" %}
+    {% endif %}
+  </body>
+</html>
