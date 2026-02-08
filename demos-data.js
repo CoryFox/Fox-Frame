@@ -1,16 +1,15 @@
 /*
-  Fox & Frame Studio
-  Demo site registry
+  Modified Demo Registry with Category Support
 
-  Add new demos here and they will automatically work in:
-  - demos.html (listing)
-  - demo.html (single demo template)
-  - the modal preview on index.html (buttons using data-demo-key)
+  Each entry now includes a `category` property. This allows the demos
+  listing page to group demos under meaningful headings (e.g. Service,
+  Fitness). Additional demos can be added following the same pattern.
 */
 
 window.FF_DEMOS = {
   trades: {
     key: "trades",
+    category: "Service",
     title: "Local Trades Website",
     subtitle: "Plumbing and heating demo build",
     tags: ["Design", "Speed", "Enquiries"],
@@ -22,9 +21,7 @@ window.FF_DEMOS = {
       ],
       mobile: { src: "assets/showcase-trades-mobile.png", alt: "Trades demo, mobile style preview" }
     },
-    // Use a path relative to the root of the GitHub Pages site
     url: "ff_trades_demo/index.html",
-    // Copy can be replaced per project
     overview: "A clean, mobile-first build for local trades. Clear service scannability, trust blocks, click-to-call, and a friction-free quote request.",
     notes: [
       "One clear CTA with click-to-call",
@@ -35,6 +32,7 @@ window.FF_DEMOS = {
 
   nyf: {
     key: "nyf",
+    category: "Fitness",
     title: "New You Fitness",
     subtitle: "Premium PT landing page with lead magnet and booking",
     tags: ["Brand", "Lead magnet", "Booking"],
@@ -46,7 +44,6 @@ window.FF_DEMOS = {
       ],
       mobile: { src: "assets/showcase-nyf-mobile.png", alt: "New You Fitness demo, mobile style preview" }
     },
-    // Use a path relative to the root of the GitHub Pages site
     url: "ff_nyf_demo/index.html",
     overview: "A premium, conversion-first personal trainer site. Built around a simple funnel, lead magnet download, and a clean calendar booking section (mocked submission).",
     notes: [
