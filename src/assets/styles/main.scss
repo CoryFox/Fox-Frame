@@ -79,8 +79,39 @@ h6 {
   box-shadow: 0 10px 30px rgba(31, 41, 51, 0.05);
 }
 
+.ff-site-nav {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  will-change: transform;
+}
+
+.ff-site-nav.is-nav-hidden {
+  transform: translateY(calc(-100% - 12px));
+  box-shadow: none !important;
+}
+
+.ff-nav-hotspot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  z-index: 1040;
+  pointer-events: none;
+  background: transparent;
+}
+
+.ff-nav-hotspot.is-active {
+  pointer-events: auto;
+}
+
 #topNav .navbar-brand img {
   transition: transform 220ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ff-site-nav {
+    transition: none;
+  }
 }
 
 #topNav .navbar-brand:hover img {

@@ -3,6 +3,9 @@ const { resolve } = require("path");
 module.exports = {
   root: ".",
   publicDir: false,
+  esbuild: {
+    target: "es2018"
+  },
   optimizeDeps: {
     include: [
       "bootstrap",
@@ -20,6 +23,7 @@ module.exports = {
     }
   },
   build: {
+    target: "es2018",
     outDir: "dist-vite",
     emptyOutDir: true,
     manifest: true,

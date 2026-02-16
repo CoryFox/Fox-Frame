@@ -1,5 +1,5 @@
 {% if navVariant == "demos" %}
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top ff-site-nav">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="/index.html">
         <img src="/assets/logo2LightBG.png" alt="Fox &amp; Frame Studio logo" width="175" class="d-inline-block align-text-top" />
@@ -23,7 +23,7 @@
 {% else %}
   {% set isHome = page.url == "/" or page.url == "/index.html" %}
   {% set homePrefix = "" if isHome else "/index.html" %}
-  <nav id="topNav" class="navbar navbar-expand-lg sticky-top">
+  <nav id="topNav" class="navbar navbar-expand-lg sticky-top ff-site-nav">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="{{ homePrefix }}#top">
         <img src="/assets/logo2LightBG.png" alt="Fox &amp; Frame Studio logo" width="175" class="d-inline-block align-text-top" />

@@ -14,7 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (event) => {
+      const href = link.getAttribute("href") || "";
+      if (href.startsWith("#") && href.length > 1) {
+        const target = document.querySelector(href);
+        if (target) {
+          event.preventDefault();
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+          history.replaceState(null, "", href);
+        }
+      }
+
       const nav = document.getElementById("navContent");
       if (!nav || !nav.classList.contains("show")) return;
       Collapse.getOrCreateInstance(nav).hide();

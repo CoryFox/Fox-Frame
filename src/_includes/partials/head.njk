@@ -14,14 +14,111 @@
 
 <!-- Prevent flash of unstyled content -->
 <style>
-  .page-loader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#F6F7F4;z-index:2000;opacity:1;transition:opacity 450ms ease;animation:ff-loader-hide 1ms linear 2200ms forwards}
+  .page-loader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#F6F7F4;z-index:2000;opacity:1;visibility:visible;transition:opacity 450ms ease;animation:ff-loader-hide 1ms linear 2200ms forwards}
   .page-loader.is-hidden{opacity:0;pointer-events:none}
   .page-loader__inner{display:flex;flex-direction:column;align-items:center;gap:16px}
   .page-loader__logo{width:140px;max-width:60vw}
   .page-loader__spinner{width:40px;height:40px;border-radius:50%;border:3px solid rgba(58,111,115,.25);border-top-color:#3A6F73;animation:ff-spin 900ms linear infinite}
   @keyframes ff-spin{to{transform:rotate(360deg)}}
-  @keyframes ff-loader-hide{to{opacity:0;pointer-events:none}}
+  @keyframes ff-loader-hide{to{opacity:0;visibility:hidden}}
 </style>
+<script>
+  (() => {
+    const hideLoader = () => {
+      const loader = document.querySelector(".page-loader");
+      if (!loader) return;
+      loader.classList.add("is-hidden");
+      loader.setAttribute("aria-hidden", "true");
+      window.setTimeout(() => loader.remove(), 700);
+    };
+
+    window.addEventListener("load", hideLoader, { once: true });
+    document.addEventListener("DOMContentLoaded", hideLoader, { once: true });
+    window.setTimeout(hideLoader, 3500);
+  })();
+</script>
+<script>
+  (function () {
+    // Smart nav fallback that works without module support (legacy Safari-safe).
+    function initNavFallback() {
+      var siteNav = document.querySelector(".ff-site-nav");
+      if (!siteNav) return;
+      if (siteNav.getAttribute("data-ff-nav-init") === "1") return;
+
+      var lastY = window.scrollY || window.pageYOffset || 0;
+      var hotspot = document.createElement("div");
+      hotspot.className = "ff-nav-hotspot";
+      hotspot.setAttribute("aria-hidden", "true");
+      document.body.appendChild(hotspot);
+      siteNav.style.transition = "transform 220ms ease, box-shadow 220ms ease";
+
+      function setHotspotActive(isActive) {
+        if (isActive) hotspot.classList.add("is-active");
+        else hotspot.classList.remove("is-active");
+      }
+
+      function showNav() {
+        siteNav.classList.remove("is-nav-hidden");
+        siteNav.style.transform = "translateY(0)";
+        setHotspotActive(false);
+      }
+
+      function hideNav() {
+        siteNav.classList.add("is-nav-hidden");
+        siteNav.style.transform = "translateY(calc(-100% - 12px))";
+        setHotspotActive(true);
+      }
+
+      function getY() {
+        return window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      }
+
+      function syncNav() {
+        var currentY = getY();
+        var delta = currentY - lastY;
+        var navContent = document.getElementById("navContent");
+        var mobileNavOpen = !!(navContent && navContent.classList.contains("show"));
+
+        if (currentY < 56 || mobileNavOpen) {
+          showNav();
+          lastY = currentY;
+          return;
+        }
+
+        if (delta > 2 && currentY > 120) {
+          hideNav();
+        } else if (delta < -2) {
+          showNav();
+        }
+        lastY = currentY;
+      }
+
+      window.addEventListener("scroll", syncNav);
+      window.addEventListener("wheel", syncNav);
+      window.addEventListener("touchmove", syncNav);
+
+      function reveal() {
+        showNav();
+      }
+
+      hotspot.addEventListener("mouseenter", reveal);
+      hotspot.addEventListener("mousemove", reveal);
+      hotspot.addEventListener("touchstart", reveal, { passive: true });
+
+      if (lastY > 120) {
+        hideNav();
+      }
+
+      siteNav.setAttribute("data-ff-nav-init", "1");
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initNavFallback);
+    } else {
+      initNavFallback();
+    }
+  })();
+</script>
 
 <!-- Vite bundles -->
 {% if vite.isDev %}
