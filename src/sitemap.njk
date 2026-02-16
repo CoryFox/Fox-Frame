@@ -1,0 +1,15 @@
+---
+permalink: /sitemap.xml
+layout: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for entry in collections.all %}
+  {% set entryUrl = entry.url or '' %}
+  {% if entryUrl and entryUrl != '/sitemap.xml' and entryUrl != '/robots.txt' and entry.data.permalink != false and (entry.data.robots != 'noindex,nofollow') and (entry.data.robots != 'noindex,follow') and (entry.data.eleventyExcludeFromCollections != true) and not entryUrl.startsWith('/ff_nyf_demo/') and not entryUrl.startsWith('/QuoteHound1_demo/') and not entryUrl.startsWith('/savewise_demo/') and not entryUrl.startsWith('/mypmicover_demo/') %}
+  <url>
+    <loc>{{ entryUrl | absoluteUrlFor(site.url) }}</loc>
+  </url>
+  {% endif %}
+{% endfor %}
+</urlset>
