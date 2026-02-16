@@ -28,7 +28,11 @@ body {
   background-color: var(--bg-main);
   color: var(--text-main);
   font-family: var(--font-body);
-  line-height: 1.6;
+  line-height: 1.65;
+  background-image:
+    radial-gradient(circle at 8% 12%, rgba(196, 122, 69, 0.06), rgba(196, 122, 69, 0) 46%),
+    radial-gradient(circle at 92% 18%, rgba(58, 111, 115, 0.07), rgba(58, 111, 115, 0) 44%),
+    radial-gradient(circle at 18% 86%, rgba(58, 111, 115, 0.05), rgba(58, 111, 115, 0) 50%);
 }
 
 /* Navbar: make it feel bespoke, not "Bootstrap" */
@@ -102,11 +106,37 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   color: var(--text-main);
+  letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
 /* Reduce visual density: keep copy readable and give layouts room to breathe */
 .lead {
   max-width: 54ch;
+  text-wrap: balance;
+}
+
+.display-5 {
+  font-size: clamp(2.5rem, 4.4vw, 4rem);
+}
+
+.section .h1 {
+  font-size: clamp(2.05rem, 3.4vw, 3.1rem);
+}
+
+.section .h1::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent-main), var(--accent-warm));
+  opacity: 0.7;
+}
+
+.section .text-muted {
+  font-size: 0.98rem;
 }
 
 .navbar-brand span {
@@ -115,12 +145,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Utility classes */
 .section {
-  padding: 72px 0;
+  padding: clamp(64px, 7vw, 96px) 0;
+}
+
+.section.section--chapter {
+  padding: clamp(84px, 9vw, 124px) 0;
 }
 
 @media (max-width: 576px) {
   .section {
-    padding: 48px 0;
+    padding: 56px 0;
   }
 }
 
@@ -138,7 +172,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-surface {
-  background: #EEF5F5; /* Very light tint for alternate sections */
+  background:
+    linear-gradient(180deg, rgba(238, 245, 245, 0.95), rgba(238, 245, 245, 0.95)),
+    radial-gradient(circle at 10% 10%, rgba(58, 111, 115, 0.08), rgba(58, 111, 115, 0) 55%);
 }
 
 .border-top {
@@ -175,8 +211,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero styles */
 .hero {
-  padding-top: 72px;
-  padding-bottom: 72px;
+  padding-top: clamp(72px, 8vw, 104px);
+  padding-bottom: clamp(72px, 8vw, 104px);
   /* Soft layered background with subtle radial accents to add depth */
   background:
     radial-gradient(circle at 20% 20%, rgba(196, 122, 69, 0.05), rgba(196, 122, 69, 0) 60%),
@@ -265,6 +301,16 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 12px 32px rgba(31, 41, 51, 0.05);
 }
 
+.card-soft .card-body {
+  padding: 26px;
+}
+
+@media (max-width: 576px) {
+  .card-soft .card-body {
+    padding: 20px;
+  }
+}
+
 /* Blog cards */
 .blog-card {
   overflow: hidden;
@@ -342,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--border-soft);
   border-radius: 16px;
   background: rgba(58, 111, 115, 0.04);
-  padding: 18px;
+  padding: 20px;
 }
 
 .callout-icon {
@@ -361,14 +407,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Steps */
 .steps {
   display: grid;
-  gap: 12px;
+  gap: 14px;
 }
 
 .step {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 14px 16px;
+  padding: 16px 18px;
   border: 1px solid var(--border-soft);
   border-radius: 16px;
   background: #ffffff;
@@ -477,7 +523,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Trust strip */
 .trust-strip {
-  padding: 18px 0;
+  padding: 22px 0;
   background: rgba(58, 111, 115, 0.06);
   border-bottom: 1px solid var(--border-soft);
 }
@@ -725,7 +771,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   gap: 10px;
   align-items: flex-start;
-  padding: 14px;
+  padding: 16px;
   border: 1px solid var(--border-soft);
   border-radius: 16px;
   background: #ffffff;
