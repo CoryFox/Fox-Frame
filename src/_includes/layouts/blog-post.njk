@@ -10,19 +10,9 @@ layout: layouts/base.njk
   {% set metaImage = site.logo | absoluteUrlFor(site.url) %}
 {% endif %}
 {% set headExtras = '
-  <link rel=\"canonical\" href=\"' ~ metaUrl ~ '\" />
   <meta property=\"og:type\" content=\"article\" />
-  <meta property=\"og:site_name\" content=\"' ~ site.name ~ '\" />
-  <meta property=\"og:title\" content=\"' ~ metaTitle ~ '\" />
-  <meta property=\"og:description\" content=\"' ~ metaDescription ~ '\" />
-  <meta property=\"og:url\" content=\"' ~ metaUrl ~ '\" />
-  <meta property=\"og:image\" content=\"' ~ metaImage ~ '\" />
-  <meta property=\"og:image:alt\" content=\"' ~ (thumbnailAlt or site.name) ~ '\" />
-  <meta property=\"article:published_time\" content=\"' ~ (dateDisplay or \"\") ~ '\" />
+  <meta property=\"article:author\" content=\"Fox &amp; Frame Studio\" />
   <meta name=\"twitter:card\" content=\"summary_large_image\" />
-  <meta name=\"twitter:title\" content=\"' ~ metaTitle ~ '\" />
-  <meta name=\"twitter:description\" content=\"' ~ metaDescription ~ '\" />
-  <meta name=\"twitter:image\" content=\"' ~ metaImage ~ '\" />
 ' %}
 <main id="main">
   <section class="section">

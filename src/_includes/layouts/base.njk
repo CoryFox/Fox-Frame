@@ -1,10 +1,34 @@
 <!doctype html>
 <html lang="{{ site.lang }}">
   <head>
+    {% set pagePath = page.url or "/" %}
+    {% set canonicalHref = canonicalUrl or (pagePath | absoluteUrlFor(site.url)) %}
+    {% set resolvedMetaImagePath = metaImage or site.socialImage or site.logo %}
+    {% set resolvedMetaImage = resolvedMetaImagePath | absoluteUrlFor(site.url) %}
+    {% set resolvedTitleSuffix = "" %}
+    {% if titleSuffix != false %}
+      {% set resolvedTitleSuffix = " – " ~ (titleSuffix or site.titleSuffix) %}
+    {% endif %}
+    {% set resolvedMetaTitle = title ~ resolvedTitleSuffix %}
+    {% set resolvedMetaDescription = description or site.defaultDescription %}
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ title }}{% if titleSuffix != false %} – {{ titleSuffix or site.titleSuffix }}{% endif %}</title>
-    <meta name="description" content="{{ description }}" />
+    <meta name="description" content="{{ resolvedMetaDescription }}" />
+    <link rel="canonical" href="{{ canonicalHref }}" />
+    <meta name="robots" content="{{ robots or 'index,follow,max-image-preview:large' }}" />
+    <meta property="og:type" content="{{ ogType or 'website' }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:title" content="{{ resolvedMetaTitle }}" />
+    <meta property="og:description" content="{{ resolvedMetaDescription }}" />
+    <meta property="og:url" content="{{ canonicalHref }}" />
+    <meta property="og:image" content="{{ resolvedMetaImage }}" />
+    <meta property="og:image:alt" content="{{ ogImageAlt or site.name }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ resolvedMetaTitle }}" />
+    <meta name="twitter:description" content="{{ resolvedMetaDescription }}" />
+    <meta name="twitter:image" content="{{ resolvedMetaImage }}" />
 
     {% include "partials/head.njk" %}
 
