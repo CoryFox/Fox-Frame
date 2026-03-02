@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+title: Case Study Title | Fox & Frame
+description: One-line case study description for metadata and search previews.
+permalink: false
+---
+{# 
+  How to use this wrapper:
+  1) Copy this file and rename it (e.g. my-project.njk)
+  2) In src/_data/caseStudies.js, copy `template` and rename that key (e.g. myProject)
+  3) Update the line below to match your new data key
+#}
+{% set cs = caseStudies.template %}
+{% include "partials/case-study-page.njk" %}

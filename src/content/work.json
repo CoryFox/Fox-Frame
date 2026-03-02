@@ -1,86 +1,65 @@
 [
   {
-    "key": "nyf",
-    "title": "New You Fitness",
-    "subtitle": "Personal trainer site that turns interest into booked consults.",
-    "url": "ff_nyf_demo/index.html",
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "tags": ["Lead magnet", "Calendar booking"],
+    "key": "fourjaw",
+    "title": "FourJaw",
+    "subtitle": "Established a clearer UX direction for an industrial SaaS product operating under delivery and stakeholder constraints.",
+    "url": "case-studies/fourjaw/",
+    "tech": ["UX Strategy", "Research Synthesis", "Product Leadership"],
+    "tags": ["SaaS", "B2B", "Cross-functional"],
     "bullets": [
-      "Offer and outcome clear in the first screen",
-      "Free guide builds trust before asking for details",
-      "Booking flow sets expectations and reduces no-shows"
+      "Shifted work from reactive UI changes to a structured UX decision model",
+      "Aligned product, engineering, and commercial input around shared priorities",
+      "Introduced clearer journey and information structures to reduce user friction"
     ],
-    "result": "A smooth path from click to booked call.",
+    "result": "Stronger product clarity, faster decision-making, and improved confidence across teams.",
     "showcase": {
       "images": [
-        { "src": "assets/showcase-nyf-1.png", "alt": "New You Fitness, desktop style preview" },
-        { "src": "assets/showcase-nyf-2.png", "alt": "New You Fitness, lead magnet flow preview" }
+        { "src": "assets/hero-mpc.png", "alt": "Case study visual placeholder for FourJaw strategic UX direction" },
+        { "src": "assets/project-trades.svg", "alt": "Case study visual placeholder representing FourJaw workflow redesign" }
       ],
-      "mobile": { "src": "assets/showcase-nyf-mobile.png", "alt": "New You Fitness, mobile style preview" }
+      "mobile": { "src": "assets/showcase-mpc-mobile.png", "alt": "Case study mobile visual placeholder for FourJaw" }
+    }
+  },
+  {
+    "key": "databowl",
+    "title": "Databowl",
+    "subtitle": "Improved onboarding and learning flow structure for a lead-generation and LMS-linked training environment.",
+    "url": "case-studies/databowl/",
+    "tech": ["Service Design", "Learning Journey UX", "Journey Mapping"],
+    "tags": ["LMS", "Lead Generation", "Ecosystem"],
+    "bullets": [
+      "Mapped fragmented acquisition-to-learning journeys into a coherent flow",
+      "Reframed content and interactions around user intent and progression",
+      "Reduced ambiguity between quote funnels, training touchpoints, and next steps"
+    ],
+    "result": "A more coherent multi-touchpoint experience that was easier to navigate and manage.",
+    "showcase": {
+      "images": [
+        { "src": "assets/hero-tutor.png", "alt": "Case study visual placeholder for Databowl journey architecture" },
+        { "src": "assets/project-tutor.svg", "alt": "Case study visual placeholder representing Databowl LMS integration" }
+      ],
+      "mobile": { "src": "assets/showcase-nyf-mobile.png", "alt": "Case study mobile visual placeholder for Databowl" }
     }
   },
   {
     "key": "quotehound",
-    "title": "QuoteHound",
-    "subtitle": "Insurance quote flow that keeps people moving to the final step.",
-    "url": "QuoteHound1_demo/quotehound1.html",
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "tags": ["Lead capture", "Multi-step"],
+    "title": "QuoteHound Ecosystem",
+    "subtitle": "Designed a multi-site quote ecosystem linked into Databowl workflows, balancing conversion speed with trust.",
+    "url": "case-studies/quotehound/",
+    "tech": ["Information Architecture", "Conversion UX", "Flow Design"],
+    "tags": ["Multi-site", "Insurance", "LMS-connected"],
     "bullets": [
-      "Short steps with visible progress",
-      "Trust proof placed where people hesitate",
-      "Forms built for quick scanning"
+      "Built a consistent UX pattern across multiple quote-focused properties",
+      "Structured high-friction form journeys to maintain momentum and confidence",
+      "Aligned acquisition experiences with downstream learning and operational workflows"
     ],
-    "result": "Fewer drop-offs and more completed quotes.",
+    "result": "A unified ecosystem that supported both lead quality and operational continuity.",
     "showcase": {
       "images": [
-        { "src": "assets/showcase-quotehound-1.png", "alt": "QuoteHound, desktop style preview" },
-        { "src": "assets/showcase-quotehound-2.png", "alt": "QuoteHound, quote journey preview" }
+        { "src": "assets/showcase-quotehound-1.png", "alt": "QuoteHound ecosystem case study desktop preview" },
+        { "src": "assets/showcase-quotehound-2.png", "alt": "QuoteHound ecosystem case study journey preview" }
       ],
-      "mobile": { "src": "assets/showcase-quotehound-mobile.png", "alt": "QuoteHound, mobile style preview" }
-    }
-  },
-  {
-    "key": "savewise",
-    "title": "SaveWise",
-    "subtitle": "Benefits-first landing page that makes the next step obvious.",
-    "url": "savewise_demo/index.html",
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "tags": ["Benefit-led", "Fast enquiry"],
-    "bullets": [
-      "Benefits are clear before any forms",
-      "Eligibility and comparisons cut back-and-forth",
-      "CTAs placed after every key proof point"
-    ],
-    "result": "Faster decisions and more enquiries.",
-    "showcase": {
-      "images": [
-        { "src": "assets/showcase-savewise-1.png", "alt": "SaveWise, desktop style preview" },
-        { "src": "assets/showcase-savewise-2.png", "alt": "SaveWise, benefits and features preview" }
-      ],
-      "mobile": { "src": "assets/showcase-savewise-mobile.png", "alt": "SaveWise, mobile style preview" }
-    }
-  },
-  {
-    "key": "mpc",
-    "title": "My PMI Cover",
-    "subtitle": "Premium PMI lead-gen with a calm, trust-first flow.",
-    "url": "mypmicover_demo/index.html",
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "tags": ["Editorial", "Lead-gen"],
-    "bullets": [
-      "Authority content up front to reduce price anxiety",
-      "Plan details broken up for easy comparison",
-      "One clear enquiry route"
-    ],
-    "result": "Premium feel without slowing enquiries.",
-    "showcase": {
-      "images": [
-        { "src": "assets/showcase-mpc-1.png", "alt": "My PMI Cover, desktop style preview" },
-        { "src": "assets/showcase-mpc-2.png", "alt": "My PMI Cover, plan and trust blocks preview" }
-      ],
-      "mobile": { "src": "assets/showcase-mpc-mobile.png", "alt": "My PMI Cover, mobile style preview" }
+      "mobile": { "src": "assets/showcase-quotehound-mobile.png", "alt": "QuoteHound ecosystem case study mobile preview" }
     }
   }
 ]
