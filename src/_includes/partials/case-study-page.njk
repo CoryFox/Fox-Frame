@@ -1,3 +1,63 @@
+{% macro renderGalleryCards(images) %}
+  {% if images and (images | length) > 0 %}
+    <div class="case-gallery-grid">
+      {% for image in images %}
+        <figure class="card card-soft case-gallery-card">
+          <img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy" class="case-gallery-image" />
+          {% if image.caption %}
+            <figcaption class="case-gallery-caption">{{ image.caption }}</figcaption>
+          {% endif %}
+        </figure>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endmacro %}
+
+{% macro renderAspectLinkedGallery(images) %}
+  {% if images and (images | length) > 0 %}
+    {% set landscapes = [] %}
+    {% set squares = [] %}
+    {% set portraits = [] %}
+    {% set singles = [] %}
+
+    {% for image in images %}
+      {% if image.aspect == "portrait" %}
+        {% set portraits = portraits.concat([image]) %}
+      {% elif image.aspect == "square" %}
+        {% set squares = squares.concat([image]) %}
+      {% else %}
+        {% set landscapes = landscapes.concat([image]) %}
+      {% endif %}
+    {% endfor %}
+
+    {% if (images | length) <= 3 %}
+      {{ renderGalleryCards(landscapes.concat(squares).concat(portraits)) }}
+    {% else %}
+    <div class="case-gallery-stack">
+      {% if (landscapes | length) > 1 %}
+        {{ renderGalleryCards(landscapes) }}
+      {% elif landscapes[0] %}
+        {% set singles = singles.concat(landscapes) %}
+      {% endif %}
+
+      {% if (squares | length) > 1 %}
+        {{ renderGalleryCards(squares) }}
+      {% elif squares[0] %}
+        {% set singles = singles.concat(squares) %}
+      {% endif %}
+
+      {% if (portraits | length) > 1 %}
+        {{ renderGalleryCards(portraits) }}
+      {% elif portraits[0] %}
+        {% set singles = singles.concat(portraits) %}
+      {% endif %}
+
+      {{ renderGalleryCards(singles) }}
+    </div>
+    {% endif %}
+  {% endif %}
+{% endmacro %}
+
 <main id="main">
   <header class="section section--chapter hero">
     <div class="container">
@@ -23,23 +83,6 @@
     </div>
   </header>
 
-  {% if cs.gallery and (cs.gallery | length) > 0 %}
-    <section class="section case-gallery">
-      <div class="container">
-        <div class="case-gallery-grid">
-          {% for image in cs.gallery %}
-              <figure class="card card-soft case-gallery-card{% if loop.first %} is-lead{% endif %}">
-                <img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy" class="case-gallery-image" />
-                {% if image.caption %}
-                  <figcaption class="case-gallery-caption">{{ image.caption }}</figcaption>
-                {% endif %}
-              </figure>
-          {% endfor %}
-        </div>
-      </div>
-    </section>
-  {% endif %}
-
   <section class="section">
     <div class="container">
       <div class="row g-4">
@@ -63,6 +106,14 @@
     </div>
   </section>
 
+  {% if cs.gallery and cs.gallery[0] %}
+    <section class="section case-gallery case-gallery--split">
+      <div class="container">
+        {{ renderGalleryCards([cs.gallery[0]]) }}
+      </div>
+    </section>
+  {% endif %}
+
   <section class="section bg-surface case-key-changes">
     <div class="container">
       <h2 class="h2 fw-semibold mb-4">Key changes made</h2>
@@ -84,6 +135,20 @@
       </div>
     </div>
   </section>
+
+  {% if cs.gallery and cs.gallery[1] %}
+    {% set midGallery = [] %}
+    {% for image in cs.gallery %}
+      {% if loop.index0 > 0 and loop.index0 < 3 %}
+        {% set midGallery = midGallery.concat([image]) %}
+      {% endif %}
+    {% endfor %}
+    <section class="section case-gallery case-gallery--split">
+      <div class="container">
+        {{ renderAspectLinkedGallery(midGallery) }}
+      </div>
+    </section>
+  {% endif %}
 
   <section class="section case-before-after">
     <div class="container">
@@ -138,4 +203,18 @@
       </div>
     </div>
   </section>
+
+  {% if cs.gallery and cs.gallery[3] %}
+    {% set trailingGallery = [] %}
+    {% for image in cs.gallery %}
+      {% if loop.index0 > 2 %}
+        {% set trailingGallery = trailingGallery.concat([image]) %}
+      {% endif %}
+    {% endfor %}
+    <section class="section case-gallery case-gallery--split">
+      <div class="container">
+        {{ renderAspectLinkedGallery(trailingGallery) }}
+      </div>
+    </section>
+  {% endif %}
 </main>

@@ -100,16 +100,19 @@ module.exports = {
       {
         src: "/assets/case-studies/fourjaw/fourjaw-hydrafeed-downtime.webp",
         alt: "FourJaw downtime logging interface",
+        aspect: "landscape",
         caption: "Operator workflow for downtime logging"
       },
       {
         src: "/assets/case-studies/fourjaw/fourjaw-sps-operator.webp",
         alt: "FourJaw operator view on production interface",
+        aspect: "landscape",
         caption: "Operator-facing workflow for live production tasks"
       },
       {
         src: "/assets/case-studies/fourjaw/fourjaw-sps-timeline.webp",
         alt: "FourJaw timeline and status tracking interface",
+        aspect: "landscape",
         caption: "Timeline visibility for status and events"
       }
     ],
@@ -212,16 +215,19 @@ module.exports = {
       {
         src: "/assets/case-studies/databowl/solutions-system.webp",
         alt: "Databowl system overview screen",
+        aspect: "landscape",
         caption: "Core system overview and navigation structure"
       },
       {
         src: "/assets/case-studies/databowl/solutions-lead-generation.webp",
         alt: "Databowl lead generation workflow",
+        aspect: "landscape",
         caption: "Lead generation journey and campaign flow"
       },
       {
         src: "/assets/case-studies/databowl/shoulder.webp",
         alt: "Databowl campaign and lead operations interface",
+        aspect: "landscape",
         caption: "Campaign and lead operations interface"
       }
     ],
@@ -317,21 +323,25 @@ module.exports = {
       {
         src: "/assets/case-studies/soloprotect/soloprotect-overview.webp",
         alt: "SoloProtect monitoring overview",
+        aspect: "square",
         caption: "Monitoring overview for live supervisory oversight"
       },
       {
         src: "/assets/case-studies/soloprotect/soloprotect-insights.webp",
         alt: "SoloProtect insights and operational metrics view",
+        aspect: "portrait",
         caption: "Operational insights and monitoring metrics"
       },
       {
         src: "/assets/case-studies/soloprotect/soloprotect-location.webp",
         alt: "SoloProtect live location interface",
+        aspect: "landscape",
         caption: "Location visibility and map-based status context"
       },
       {
         src: "/assets/case-studies/soloprotect/soloprotect-mobile.webp",
         alt: "SoloProtect mobile alarm monitoring interface",
+        aspect: "square",
         caption: "Mobile alarm monitoring interface"
       }
     ],
