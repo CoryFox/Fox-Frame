@@ -14,27 +14,47 @@ permalink: blog/index.html
           <p class="text-muted mb-0">Practical insights for small businesses, local services, and growing brands.</p>
         </div>
         <div class="col-lg-5 text-lg-end">
-          <a class="btn btn-outline-secondary" href="/index.html#contact">Book a free discovery call</a>
+          <a class="btn btn-outline-secondary" href="{{ site.mediumProfileUrl if mediumPosts and mediumPosts.length and site.mediumProfileUrl else '/index.html#contact' }}" {% if mediumPosts and mediumPosts.length and site.mediumProfileUrl %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            {{ "View Medium profile" if mediumPosts and mediumPosts.length and site.mediumProfileUrl else "Book a free discovery call" }}
+          </a>
         </div>
       </div>
 
       <div class="row g-3">
-        {% for post in collections.blog %}
-          <div class="col-md-6 col-lg-4">
-            <a class="card card-soft h-100 hover-rise blog-card blog-card--link" href="{{ post.url }}">
-              {% if post.data.thumbnail %}
-                <img src="{{ post.data.thumbnail | urlFor }}" class="card-img-top blog-card__img" alt="{{ post.data.thumbnailAlt }}" loading="lazy" />
-              {% endif %}
-              <div class="card-body">
-                <h2 class="h5 mb-2">{{ post.data.title }}</h2>
-                {% if post.data.summary %}
-                  <p class="text-muted mb-3">{{ post.data.summary }}</p>
+        {% if mediumPosts and mediumPosts.length %}
+          {% for post in mediumPosts %}
+            <div class="col-md-6 col-lg-4">
+              <a class="card card-soft h-100 hover-rise blog-card blog-card--link" href="{{ post.url }}" target="_blank" rel="noopener noreferrer">
+                <img src="{{ post.thumbnail or (site.socialImage | urlFor) }}" class="card-img-top blog-card__img" alt="{{ post.title }}" loading="lazy" />
+                <div class="card-body">
+                  <div class="small text-muted mb-2">{{ post.source }}{% if post.dateLabel %} • {{ post.dateLabel }}{% endif %}</div>
+                  <h2 class="h5 mb-2">{{ post.title }}</h2>
+                  {% if post.summary %}
+                    <p class="text-muted mb-3">{{ post.summary }}</p>
+                  {% endif %}
+                  <span class="btn btn-sm btn-primary">Read on Medium</span>
+                </div>
+              </a>
+            </div>
+          {% endfor %}
+        {% else %}
+          {% for post in collections.blog %}
+            <div class="col-md-6 col-lg-4">
+              <a class="card card-soft h-100 hover-rise blog-card blog-card--link" href="{{ post.url }}">
+                {% if post.data.thumbnail %}
+                  <img src="{{ post.data.thumbnail | urlFor }}" class="card-img-top blog-card__img" alt="{{ post.data.thumbnailAlt }}" loading="lazy" />
                 {% endif %}
-                <span class="btn btn-sm btn-primary">Read article</span>
-              </div>
-            </a>
-          </div>
-        {% endfor %}
+                <div class="card-body">
+                  <h2 class="h5 mb-2">{{ post.data.title }}</h2>
+                  {% if post.data.summary %}
+                    <p class="text-muted mb-3">{{ post.data.summary }}</p>
+                  {% endif %}
+                  <span class="btn btn-sm btn-primary">Read article</span>
+                </div>
+              </a>
+            </div>
+          {% endfor %}
+        {% endif %}
       </div>
 
       {% include "partials/blog-cta.njk" %}

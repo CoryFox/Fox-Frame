@@ -32,8 +32,14 @@ function getTagValue(block, tagName) {
 }
 
 function getFirstImageSrc(html = "") {
-  const match = html.match(/<img[^>]*src=["']([^"']+)["'][^>]*>/i);
-  return match ? decodeHtml(match[1]) : "";
+  const matches = html.matchAll(/<img[^>]*src=["']([^"']+)["'][^>]*>/gi);
+  for (const match of matches) {
+    const candidate = decodeHtml(match[1] || "");
+    if (!candidate) continue;
+    if (candidate.includes("medium.com/_/stat?event=post.clientViewed")) continue;
+    return candidate;
+  }
+  return "";
 }
 
 function toFeedUrl(input = "") {
@@ -66,12 +72,13 @@ function mapItemToPost(itemXml) {
   const contentHtml = getTagValue(itemXml, "content:encoded");
   const date = new Date(pubDateRaw);
   const summary = stripHtml(descriptionHtml || contentHtml).slice(0, 180);
+  const thumbnail = getFirstImageSrc(descriptionHtml || contentHtml);
 
   return {
     title,
     url: link,
     summary,
-    thumbnail: getFirstImageSrc(descriptionHtml || contentHtml),
+    thumbnail,
     dateISO: Number.isNaN(date.getTime()) ? "" : date.toISOString(),
     dateLabel: Number.isNaN(date.getTime())
       ? ""
