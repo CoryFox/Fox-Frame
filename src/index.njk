@@ -539,9 +539,7 @@ headExtras: |
             {% if loop.index <= 3 %}
             <div class="col-md-6 col-lg-4">
               <a class="card card-soft h-100 hover-rise blog-card blog-card--link" href="{{ post.url }}" target="_blank" rel="noopener noreferrer">
-                {% if post.thumbnail %}
-                  <img src="{{ post.thumbnail }}" class="card-img-top blog-card__img" alt="{{ post.title }}" loading="lazy" />
-                {% endif %}
+                <img src="{{ post.thumbnail or (site.socialImage | urlFor) }}" class="card-img-top blog-card__img" alt="{{ post.title }}" loading="lazy" />
                 <div class="card-body">
                   <div class="small text-muted mb-2">{{ post.source }}{% if post.dateLabel %} • {{ post.dateLabel }}{% endif %}</div>
                   <h3 class="h5 mb-2">{{ post.title }}</h3>
