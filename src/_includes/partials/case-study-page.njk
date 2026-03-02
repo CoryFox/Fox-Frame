@@ -26,9 +26,6 @@
   {% if cs.gallery and (cs.gallery | length) > 0 %}
     <section class="section case-gallery">
       <div class="container">
-        <div class="d-flex align-items-end justify-content-between mb-3">
-          <h2 class="h4 fw-semibold mb-0">Selected interface snapshots</h2>
-        </div>
         <div class="case-gallery-grid">
           {% for image in cs.gallery %}
               <figure class="card card-soft case-gallery-card{% if loop.first %} is-lead{% endif %}">
@@ -120,7 +117,7 @@
     </div>
   </section>
 
-  <section class="section bg-surface">
+  <section class="section bg-surface case-outcomes">
     <div class="container">
       <h2 class="h2 fw-semibold mb-3">Outcomes and improvements</h2>
       <ul class="list-unstyled mb-0">
@@ -131,12 +128,12 @@
       {% if cs.note %}
         <p class="small text-muted mt-3 mb-0">{{ cs.note }}</p>
       {% endif %}
-      <div class="mt-4">
+      <div class="mt-4 case-study-cta">
         {% if cs.ctaPrimary %}
           <a class="btn btn-primary" href="{{ cs.ctaPrimary.href }}"{% if cs.ctaPrimary.newTab %} target="_blank" rel="noopener"{% endif %}>{{ cs.ctaPrimary.label }}</a>
         {% endif %}
         {% if cs.ctaSecondary %}
-          <a class="btn btn-outline-secondary ms-2" href="{{ cs.ctaSecondary.href }}">{{ cs.ctaSecondary.label }}</a>
+          <a class="btn btn-outline-secondary" href="{{ cs.ctaSecondary.href }}">{{ cs.ctaSecondary.label }}</a>
         {% endif %}
       </div>
     </div>

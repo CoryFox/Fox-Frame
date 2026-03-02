@@ -29,8 +29,6 @@ permalink: demos.html
           <div class="col-lg-6">
             <div class="card card-soft h-100 hover-rise">
               <div class="card-body p-4 p-md-5">
-                <p class="text-uppercase small text-muted mb-2">Case study</p>
-
                 {% if project.showcase and project.showcase.images and (project.showcase.images | length) > 0 %}
                   <div class="showcase mb-4">
                     <div class="showcase-main">
@@ -70,7 +68,7 @@ permalink: demos.html
                     <span class="chip chip-tech">{{ t }}</span>
                   {% endfor %}
                 </div>
-                <ul class="list-unstyled mb-4">
+                <ul class="list-unstyled mb-4 case-card-bullets">
                   {% for item in project.bullets %}
                     <li class="mb-2"><i class="bi bi-check2 me-2"></i>{{ item }}</li>
                   {% endfor %}

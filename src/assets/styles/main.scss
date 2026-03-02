@@ -1134,7 +1134,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .case-key-changes .list-unstyled li i {
   flex: 0 0 1rem;
-  margin-top: 0;
+  margin-top: 6px;
   margin-right: 0 !important;
   line-height: 1;
 }
@@ -1148,9 +1148,50 @@ h1, h2, h3, h4, h5, h6 {
 
 .case-before-after .list-unstyled li i {
   flex: 0 0 1rem;
-  margin-top: 0;
+  margin-top: 6px;
   margin-right: 0 !important;
   line-height: 1;
+}
+
+/* Keep wrapped bullet alignment clean in case study cards on /demos */
+.case-card-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.case-card-bullets li i {
+  flex: 0 0 1rem;
+  margin-top: 6px;
+  margin-right: 0 !important;
+  line-height: 1;
+}
+
+/* Keep wrapped bullet alignment consistent in outcomes section */
+.case-outcomes .list-unstyled li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.case-outcomes .list-unstyled li i {
+  flex: 0 0 1rem;
+  margin-top: 6px;
+  margin-right: 0 !important;
+  line-height: 1;
+}
+
+/* Consistent CTA spacing when buttons wrap on smaller screens */
+.case-study-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 576px) {
+  .case-study-cta .btn {
+    width: 100%;
+  }
 }
 
 /* Profile panel */
