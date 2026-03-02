@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Auto-apply animations site-wide to key elements.
   // Keeps markup clean and avoids over-animating tiny UI details.
   const selectors = [
-    '.hero-card',
+    '.hero-copy',
     '.trust-item',
     '.section h2',
     '.section .lead',
