@@ -1,0 +1,144 @@
+<main id="main">
+  <header class="section section--chapter hero">
+    <div class="container">
+      <p class="text-uppercase small text-muted mb-2">Case Study</p>
+      <h1 class="display-6 fw-semibold mb-3">{{ cs.title }}</h1>
+      <p class="lead text-muted mb-4">{{ cs.intro }}</p>
+
+      {% if cs.summaryCards and (cs.summaryCards | length) > 0 %}
+        <div class="row g-3 case-summary">
+          {% for card in cs.summaryCards %}
+            <div class="col-md-6 col-lg-3">
+              <div class="mini">
+                <i class="bi {{ card.icon }}"></i>
+                <div>
+                  <div class="case-summary__label">{{ card.label }}</div>
+                  <div class="text-muted small">{{ card.text }}</div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if cs.gallery and (cs.gallery | length) > 0 %}
+    <section class="section case-gallery">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between mb-3">
+          <h2 class="h4 fw-semibold mb-0">Selected interface snapshots</h2>
+        </div>
+        <div class="case-gallery-grid">
+          {% for image in cs.gallery %}
+              <figure class="card card-soft case-gallery-card{% if loop.first %} is-lead{% endif %}">
+                <img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy" class="case-gallery-image" />
+                {% if image.caption %}
+                  <figcaption class="case-gallery-caption">{{ image.caption }}</figcaption>
+                {% endif %}
+              </figure>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  <section class="section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card card-soft h-100">
+            <div class="card-body">
+              <h2 class="h4 fw-semibold mb-3">Context</h2>
+              <p class="mb-0">{{ cs.context }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card card-soft h-100">
+            <div class="card-body">
+              <h2 class="h4 fw-semibold mb-3">Primary challenge</h2>
+              <p class="mb-0">{{ cs.challenge }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-surface case-key-changes">
+    <div class="container">
+      <h2 class="h2 fw-semibold mb-4">Key changes made</h2>
+      <div class="row g-3">
+        {% for change in cs.keyChanges %}
+          <div class="col-lg-6">
+            <div class="card card-soft h-100">
+              <div class="card-body">
+                <h3 class="h5 fw-semibold mb-2">{{ change.title }}</h3>
+                <ul class="list-unstyled mb-0">
+                  {% for bullet in change.bullets %}
+                    <li class="mb-2{% if loop.last %} mb-0{% endif %}"><i class="bi bi-check2 me-2"></i>{{ bullet }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section case-before-after">
+    <div class="container">
+      <h2 class="h2 fw-semibold mb-4">Before and after snapshot</h2>
+      <div class="row g-3">
+        <div class="col-lg-6">
+          <div class="card card-soft h-100">
+            <div class="card-body">
+              <h3 class="h5 fw-semibold mb-3">Before</h3>
+              <ul class="list-unstyled mb-0">
+                {% for bullet in cs.before %}
+                  <li class="mb-2{% if loop.last %} mb-0{% endif %}"><i class="bi bi-dash-circle me-2"></i>{{ bullet }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card card-soft h-100">
+            <div class="card-body">
+              <h3 class="h5 fw-semibold mb-3">After</h3>
+              <ul class="list-unstyled mb-0">
+                {% for bullet in cs.after %}
+                  <li class="mb-2{% if loop.last %} mb-0{% endif %}"><i class="bi bi-check2-circle me-2"></i>{{ bullet }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-surface">
+    <div class="container">
+      <h2 class="h2 fw-semibold mb-3">Outcomes and improvements</h2>
+      <ul class="list-unstyled mb-0">
+        {% for bullet in cs.outcomes %}
+          <li class="mb-2{% if loop.last %} mb-0{% endif %}"><i class="bi bi-check2 me-2"></i>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+      {% if cs.note %}
+        <p class="small text-muted mt-3 mb-0">{{ cs.note }}</p>
+      {% endif %}
+      <div class="mt-4">
+        {% if cs.ctaPrimary %}
+          <a class="btn btn-primary" href="{{ cs.ctaPrimary.href }}"{% if cs.ctaPrimary.newTab %} target="_blank" rel="noopener"{% endif %}>{{ cs.ctaPrimary.label }}</a>
+        {% endif %}
+        {% if cs.ctaSecondary %}
+          <a class="btn btn-outline-secondary ms-2" href="{{ cs.ctaSecondary.href }}">{{ cs.ctaSecondary.label }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+</main>

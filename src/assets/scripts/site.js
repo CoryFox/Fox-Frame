@@ -1,4 +1,4 @@
-import { Collapse } from "bootstrap";
+import { Offcanvas } from "bootstrap";
 
 document.addEventListener("DOMContentLoaded", () => {
   const loader = document.querySelector(".page-loader");
@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      const nav = document.getElementById("navContent");
-      if (!nav || !nav.classList.contains("show")) return;
-      Collapse.getOrCreateInstance(nav).hide();
+      const openMenu = document.querySelector(".ff-site-menu.show");
+      if (!openMenu) return;
+      Offcanvas.getOrCreateInstance(openMenu).hide();
     });
   });
 

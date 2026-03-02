@@ -1,51 +1,71 @@
 {% if navVariant == "demos" %}
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top ff-site-nav">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="/index.html">
-        <img src="/assets/logo2LightBG.png" alt="Fox &amp; Frame Studio logo" width="175" class="d-inline-block align-text-top" />
-      </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+  {% set menuId = "siteMenuDemos" %}
+  <nav class="navbar sticky-top ff-site-nav">
+    <div class="container ff-nav-shell">
+      <button class="navbar-toggler ff-menu-toggle border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#{{ menuId }}" aria-controls="{{ menuId }}" aria-label="Open navigation menu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="/index.html#work">Work</a></li>
-          <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
-          <li class="nav-item"><a class="nav-link{% if page.url == '/demos.html' %} active{% endif %}" {% if page.url == '/demos.html' %}aria-current="page"{% endif %} href="/demos.html">Demos</a></li>
-          <li class="nav-item"><a class="nav-link" href="/index.html#contact">Contact</a></li>
-        </ul>
-        <div class="ms-lg-3 d-grid d-lg-block">
-          <a class="btn btn-primary" href="/index.html#contact">Free chat</a>
-        </div>
+      <a class="navbar-brand ff-nav-brand" href="/index.html">
+        <img src="/assets/logo2LightBG.png" alt="Fox &amp; Frame Studio logo" width="175" class="d-inline-block align-text-top" />
+      </a>
+      <div class="ff-nav-actions">
+        <a class="btn btn-primary ff-nav-cta d-none d-lg-inline-flex" href="/index.html#contact">Book a strategy call</a>
       </div>
     </div>
   </nav>
+  <div class="offcanvas offcanvas-start ff-site-menu" tabindex="-1" id="{{ menuId }}" aria-labelledby="{{ menuId }}Label">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title h6 mb-0" id="{{ menuId }}Label">Menu</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav ff-menu-links">
+        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link{% if page.url == '/demos.html' %} active{% endif %}" {% if page.url == '/demos.html' %}aria-current="page"{% endif %} href="/demos.html">Case Studies</a></li>
+        <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="/index.html#contact">Contact</a></li>
+      </ul>
+      <div class="d-grid mt-3">
+        <a class="btn btn-primary" href="/index.html#contact">Book a strategy call</a>
+      </div>
+    </div>
+  </div>
 {% else %}
   {% set isHome = page.url == "/" or page.url == "/index.html" %}
   {% set homePrefix = "" if isHome else "/index.html" %}
-  <nav id="topNav" class="navbar navbar-expand-lg sticky-top ff-site-nav">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="{{ homePrefix }}#top">
-        <img src="/assets/logo2LightBG.png" alt="Fox &amp; Frame Studio logo" width="175" class="d-inline-block align-text-top" />
-      </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+  {% set menuId = "siteMenuPrimary" %}
+  <nav id="topNav" class="navbar sticky-top ff-site-nav">
+    <div class="container ff-nav-shell">
+      <button class="navbar-toggler ff-menu-toggle border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#{{ menuId }}" aria-controls="{{ menuId }}" aria-label="Open navigation menu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="{{ homePrefix }}#work">Work</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ homePrefix }}#what-you-get">What you get</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ homePrefix }}#process">Process</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ homePrefix }}#pricing">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ homePrefix }}#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ homePrefix }}#testimonials">Feedback</a></li>
-          <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ homePrefix }}#faq">FAQ</a></li>
-        </ul>
-        <div class="ms-lg-3 d-grid d-lg-block">
-          <a class="btn btn-primary" href="{{ homePrefix }}#contact">Contact Us</a>
-        </div>
+      <a class="navbar-brand ff-nav-brand" href="{{ homePrefix }}#top">
+        <img src="/assets/logo2LightBG.png" alt="Fox &amp; Frame Studio logo" width="175" class="d-inline-block align-text-top" />
+      </a>
+      <div class="ff-nav-actions">
+        <a class="btn btn-primary ff-nav-cta d-none d-lg-inline-flex" href="{{ homePrefix }}#contact">Book a strategy call</a>
       </div>
     </div>
   </nav>
+  <div class="offcanvas offcanvas-start ff-site-menu" tabindex="-1" id="{{ menuId }}" aria-labelledby="{{ menuId }}Label">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title h6 mb-0" id="{{ menuId }}Label">Menu</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav ff-menu-links">
+        <li class="nav-item"><a class="nav-link" href="{{ homePrefix }}#work">Case Studies</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ homePrefix }}#what-you-get">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ homePrefix }}#process">Approach</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ homePrefix }}#pricing">Engagements</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ homePrefix }}#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ homePrefix }}#testimonials">Outcomes</a></li>
+        <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ homePrefix }}#faq">FAQ</a></li>
+      </ul>
+      <div class="d-grid mt-3">
+        <a class="btn btn-primary" href="{{ homePrefix }}#contact">Book a strategy call</a>
+      </div>
+    </div>
+  </div>
 {% endif %}

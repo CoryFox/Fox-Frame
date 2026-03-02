@@ -1,86 +1,65 @@
 [
   {
-    "key": "nyf",
-    "title": "New You Fitness",
-    "subtitle": "Personal trainer site that turns interest into booked consults.",
-    "url": "ff_nyf_demo/index.html",
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "tags": ["Lead magnet", "Calendar booking"],
+    "key": "fourjaw",
+    "title": "FourJaw",
+    "subtitle": "Set UX and product direction for an industrial SaaS platform operating under delivery pressure and competing stakeholder priorities.",
+    "url": "case-studies/fourjaw/",
+    "tech": ["UX Strategy", "Research Synthesis", "Product Leadership"],
+    "tags": ["SaaS", "B2B", "Cross-functional"],
     "bullets": [
-      "Offer and outcome clear in the first screen",
-      "Free guide builds trust before asking for details",
-      "Booking flow sets expectations and reduces no-shows"
+      "Moved the team from reactive UI requests to a repeatable decision framework",
+      "Aligned product, engineering, and commercial stakeholders around shared priorities",
+      "Restructured core journeys and information flow to reduce avoidable friction"
     ],
-    "result": "A smooth path from click to booked call.",
+    "result": "Improved decision velocity, clearer product direction, and stronger cross-team confidence.",
     "showcase": {
       "images": [
-        { "src": "assets/showcase-nyf-1.png", "alt": "New You Fitness, desktop style preview" },
-        { "src": "assets/showcase-nyf-2.png", "alt": "New You Fitness, lead magnet flow preview" }
+        { "src": "assets/case-studies/fourjaw/fourjaw-hydrafeed-downtime.webp", "alt": "FourJaw operator downtime logging interface" },
+        { "src": "assets/case-studies/fourjaw/fourjaw-sps-timeline.webp", "alt": "FourJaw timeline view interface" }
       ],
-      "mobile": { "src": "assets/showcase-nyf-mobile.png", "alt": "New You Fitness, mobile style preview" }
+      "mobile": { "src": "assets/case-studies/fourjaw/fourjaw-sps-operator.webp", "alt": "FourJaw operator view" }
     }
   },
   {
-    "key": "quotehound",
-    "title": "QuoteHound",
-    "subtitle": "Insurance quote flow that keeps people moving to the final step.",
-    "url": "QuoteHound1_demo/quotehound1.html",
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "tags": ["Lead capture", "Multi-step"],
+    "key": "soloprotect",
+    "title": "SoloProtect",
+    "subtitle": "Led UX and full-stack delivery for geolocation-led lone-worker monitoring and incident-response interfaces.",
+    "url": "case-studies/soloprotect/",
+    "tech": ["UX Development", "Blazor", "C#/.NET"],
+    "tags": ["IoT", "Safety Tech", "Operations"],
     "bullets": [
-      "Short steps with visible progress",
-      "Trust proof placed where people hesitate",
-      "Forms built for quick scanning"
+      "Designed supervisor and operations journeys for map-based device monitoring",
+      "Led a new geolocation service experience across individual and fleet oversight",
+      "Built production interfaces from prototype to handoff in Azure DevOps workflows"
     ],
-    "result": "Fewer drop-offs and more completed quotes.",
+    "result": "Faster monitoring decisions and clearer incident-response visibility for operational teams.",
     "showcase": {
       "images": [
-        { "src": "assets/showcase-quotehound-1.png", "alt": "QuoteHound, desktop style preview" },
-        { "src": "assets/showcase-quotehound-2.png", "alt": "QuoteHound, quote journey preview" }
+        { "src": "assets/case-studies/soloprotect/soloprotect-overview.webp", "alt": "SoloProtect monitoring overview interface" },
+        { "src": "assets/case-studies/soloprotect/soloprotect-insights.webp", "alt": "SoloProtect insights interface" }
       ],
-      "mobile": { "src": "assets/showcase-quotehound-mobile.png", "alt": "QuoteHound, mobile style preview" }
+      "mobile": { "src": "assets/case-studies/soloprotect/soloprotect-mobile.webp", "alt": "SoloProtect mobile interface" }
     }
   },
   {
-    "key": "savewise",
-    "title": "SaveWise",
-    "subtitle": "Benefits-first landing page that makes the next step obvious.",
-    "url": "savewise_demo/index.html",
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "tags": ["Benefit-led", "Fast enquiry"],
+    "key": "databowl",
+    "title": "Databowl",
+    "subtitle": "Redesigned onboarding and lead flow architecture across a lead-generation platform connected to a Lead Management System.",
+    "url": "case-studies/databowl/",
+    "tech": ["Service Design", "Lead Flow UX", "Journey Mapping"],
+    "tags": ["Lead Management System", "Lead Generation", "Ecosystem"],
     "bullets": [
-      "Benefits are clear before any forms",
-      "Eligibility and comparisons cut back-and-forth",
-      "CTAs placed after every key proof point"
+      "Mapped fragmented acquisition-to-lead-management journeys into one coherent flow",
+      "Reframed content and interaction patterns around user intent and progression",
+      "Reduced ambiguity between quote funnels, lead-management touchpoints, and next actions"
     ],
-    "result": "Faster decisions and more enquiries.",
+    "result": "A clearer multi-touchpoint journey that improved usability for users and operators.",
     "showcase": {
       "images": [
-        { "src": "assets/showcase-savewise-1.png", "alt": "SaveWise, desktop style preview" },
-        { "src": "assets/showcase-savewise-2.png", "alt": "SaveWise, benefits and features preview" }
+        { "src": "assets/case-studies/databowl/solutions-system.webp", "alt": "Databowl lead management platform interface" },
+        { "src": "assets/case-studies/databowl/solutions-lead-generation.webp", "alt": "Databowl lead generation workflow interface" }
       ],
-      "mobile": { "src": "assets/showcase-savewise-mobile.png", "alt": "SaveWise, mobile style preview" }
-    }
-  },
-  {
-    "key": "mpc",
-    "title": "My PMI Cover",
-    "subtitle": "Premium PMI lead-gen with a calm, trust-first flow.",
-    "url": "mypmicover_demo/index.html",
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "tags": ["Editorial", "Lead-gen"],
-    "bullets": [
-      "Authority content up front to reduce price anxiety",
-      "Plan details broken up for easy comparison",
-      "One clear enquiry route"
-    ],
-    "result": "Premium feel without slowing enquiries.",
-    "showcase": {
-      "images": [
-        { "src": "assets/showcase-mpc-1.png", "alt": "My PMI Cover, desktop style preview" },
-        { "src": "assets/showcase-mpc-2.png", "alt": "My PMI Cover, plan and trust blocks preview" }
-      ],
-      "mobile": { "src": "assets/showcase-mpc-mobile.png", "alt": "My PMI Cover, mobile style preview" }
+      "mobile": { "src": "assets/case-studies/databowl/shoulder.webp", "alt": "Databowl campaign view" }
     }
   }
 ]

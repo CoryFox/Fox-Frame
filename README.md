@@ -1,6 +1,6 @@
 # Fox & Frame Studio
 
-Marketing site and demo showcase built with Eleventy (Nunjucks) + Vite + Bootstrap 5. Vite bundles the front-end assets and Eleventy renders pages into the final `dist/` output.
+Marketing site and case-study portfolio built with Eleventy (Nunjucks) + Vite + Bootstrap 5. Vite bundles front-end assets and Eleventy renders pages into the final `dist/` output.
 
 **Stack**
 - Eleventy + Nunjucks for templates
@@ -42,12 +42,13 @@ Build flow:
 **Project Structure**
 - `src/` templates, content, and source assets
 - `src/_includes/` Nunjucks layouts and partials
-- `src/_data/` Eleventy data files (including Vite manifest helper)
-- `src/content/` JSON content (demos, site data, work items)
+- `src/_data/` Eleventy data files (including Vite helper and case study data)
+- `src/content/` JSON content (site/work metadata)
 - `src/assets/` Vite entry, JS modules, Sass
 - `src/public/` static assets copied to output
 - `dist/` final build output (generated)
 - `dist-vite/` Vite build output (generated)
+- `src/case-studies/` case-study page wrappers
 
 **Pages, Layouts, and Data**
 - Page templates are `.njk` files in `src/` (for example `src/index.njk`, `src/demos.njk`, `src/demo.njk`)
@@ -56,8 +57,29 @@ Build flow:
 - Site-wide settings live in `src/_data/site.json`
 - Demo and work content lives in `src/content/` and is loaded by data helpers
 
-**Demo Content**
-Demo metadata lives in `src/content/demos.json` and is grouped for templates by `src/_data/demos.js`.
+**Case Studies**
+The portfolio now uses a reusable case-study template system:
+- Shared content model: `src/_data/caseStudies.js`
+- Shared renderer partial: `src/_includes/partials/case-study-page.njk`
+- Thin page wrappers: `src/case-studies/*.njk`
+
+To add a new case study:
+1. Copy the `template` object in `src/_data/caseStudies.js` and rename the key (for example `newProject`)
+2. Fill in the fields (`summaryCards`, `context`, `challenge`, `keyChanges`, `before/after`, `outcomes`, CTAs)
+3. Copy `src/case-studies/_template.njk` to `src/case-studies/<slug>.njk`
+4. Update the wrapper to point to your key:
+```njk
+{% set cs = caseStudies.newProject %}
+{% include "partials/case-study-page.njk" %}
+```
+5. Add/update the card entry in `src/content/work.json` so the case study appears on homepage and listing pages
+
+Template notes:
+- `_template.njk` has `permalink: false`, so it will never publish as a live route
+- The reusable structure enforces consistent scanability across case studies
+
+**Legacy Demo Content**
+Demo metadata still lives in `src/content/demos.json` and is grouped for templates by `src/_data/demos.js`.
 To add a new demo:
 1. Add the HTML in a new `src/<demo>_demo/` folder
 2. Add a matching entry in `src/content/demos.json`
@@ -108,13 +130,17 @@ src/**/*.njk ───────────► Eleventy ──► dist/ (HTML
 | Route | Description |
 | --- | --- |
 | `http://localhost:8080/` | Eleventy dev site |
-| `http://localhost:8080/demos/` | Demo listing page |
+| `http://localhost:8080/demos/` | Case studies listing page |
 | `http://localhost:8080/demo/` | Demo detail page (uses data from `src/content/demos.json`) |
+| `http://localhost:8080/case-studies/fourjaw/` | FourJaw case study |
+| `http://localhost:8080/case-studies/databowl/` | Databowl case study |
 | `http://localhost:5173/` | Vite dev server (assets only) |
 
 **Content Glossary**
 - `src/content/demos.json` demo metadata used by the demos pages
-- `src/content/work.json` work/portfolio items (if present)
+- `src/content/work.json` work/case-study cards used on homepage and listing
+- `src/_data/caseStudies.js` canonical case-study content model and entries
+- `src/_includes/partials/case-study-page.njk` reusable case-study page template
 - `src/_data/site.json` site-wide configuration (nav, titles, metadata)
 
 **Deployment**
