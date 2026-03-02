@@ -134,7 +134,6 @@ src/**/*.njk ───────────► Eleventy ──► dist/ (HTML
 | `http://localhost:8080/demo/` | Demo detail page (uses data from `src/content/demos.json`) |
 | `http://localhost:8080/case-studies/fourjaw/` | FourJaw case study |
 | `http://localhost:8080/case-studies/databowl/` | Databowl case study |
-| `http://localhost:8080/case-studies/quotehound/` | QuoteHound case study |
 | `http://localhost:5173/` | Vite dev server (assets only) |
 
 **Content Glossary**

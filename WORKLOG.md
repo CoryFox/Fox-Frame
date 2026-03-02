@@ -8,6 +8,21 @@ Use this file to preserve project context between sessions.
 - Active branch: `feature/ux-consultancy-pivot-case-studies`
 
 ## Decisions Made
+- [2026-03-02] QuoteHound case study removed from active portfolio listing.
+  - Why: Prioritize current portfolio narrative around FourJaw, Databowl, and SoloProtect.
+  - Files affected: `src/_data/caseStudies.js`, `src/content/work.json`, `src/case-studies/quotehound.njk`, `README.md`
+- [2026-03-02] Added SoloProtect case study with IoT + full-stack UX delivery framing.
+  - Why: Expand portfolio evidence toward UX Developer breadth, technical depth, and high-stakes operational workflows.
+  - Files affected: `src/_data/caseStudies.js`, `src/case-studies/soloprotect.njk`, `src/content/work.json`
+- [2026-03-02] Homepage voice polished for confident consultancy + portfolio balance.
+  - Why: Keep premium consultancy tone while still supporting job-application use as a portfolio.
+  - Files affected: `src/index.njk`
+- [2026-03-02] Tone recalibrated to consultancy-first with subtle portfolio signaling.
+  - Why: Remove explicit hiring language while keeping the site effective for both role applications and side gigs.
+  - Files affected: `src/index.njk`, `src/_includes/partials/nav.njk`
+- [2026-03-02] Homepage and navigation copy rewritten for hiring-first positioning.
+  - Why: Shift from consultancy framing to senior UX lead / product ownership role signaling.
+  - Files affected: `src/index.njk`, `src/_includes/partials/nav.njk`, `src/content/work.json`, `src/_data/site.json`
 - [2026-03-02] Homepage repositioned to consultancy-first.
   - Why: Align brand with senior UX hiring signal and strategic consultancy value.
   - Files affected: `src/index.njk`, `src/_includes/partials/nav.njk`, `src/content/work.json`
@@ -33,11 +48,10 @@ Use this file to preserve project context between sessions.
 ## Next Actions
 1. Open and submit PR: `https://github.com/CoryFox/Fox-Frame/pull/new/feature/ux-consultancy-pivot-case-studies`
 2. Add/replace real case-study assets where permission allows (especially FourJaw/Databowl visuals).
-3. Continue refining Databowl and QuoteHound copy with project-specific operational details.
+3. Continue refining Databowl and SoloProtect copy with project-specific operational details.
 
 ## Open Questions
 - Which safe screenshots/artifacts can be used publicly for FourJaw and Databowl?
-- Should QuoteHound CTA remain to live flow or route to a deeper internal narrative first?
 - Do we want a `case study index filter` (by domain/type) now or after content maturity?
 
 ## Constraints
@@ -65,7 +79,7 @@ Use this file to preserve project context between sessions.
   - Homepage and nav repositioned to UX consultancy-first.
   - Work cards now point to proper case-study pages.
   - Reusable case-study system added (`caseStudies.js` + shared partial + wrappers).
-  - FourJaw/Databowl/QuoteHound converted to common structure.
+  - FourJaw/Databowl converted to common structure, with SoloProtect now added as a new structured case study.
   - Case-study summary cards and bullet alignment visually standardized.
   - README updated with new architecture/workflow.
 - What remains:

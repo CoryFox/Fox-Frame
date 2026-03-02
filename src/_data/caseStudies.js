@@ -166,83 +166,83 @@ module.exports = {
   },
 
   databowl: {
-    title: "Databowl: Clarifying a fragmented acquisition-to-learning journey",
+    title: "Databowl: Rebuilding the 'Grey Beast' into a scalable lead operations platform",
     intro:
-      "This case focused on reducing friction across connected touchpoints where lead-generation journeys and LMS-linked progression needed to operate as one coherent system.",
+      "From 2018 to 2020, this work transformed Databowl from a dated, hard-to-navigate internal system into a clearer, process-led SaaS experience that improved onboarding, lead quality outcomes, and client confidence.",
     summaryCards: [
       {
         icon: "bi-briefcase",
         label: "Role",
-        text: "UX strategy and journey architecture across connected funnel and learning experiences"
+        text: "Sole UX Designer and developer, leading UX direction in collaboration with CEO and Head of Engineering"
       },
       {
         icon: "bi-diagram-3",
         label: "Scope",
-        text: "Cross-site flow logic, messaging hierarchy, and acquisition-to-learning continuity"
+        text: "Onboarding architecture, first-campaign setup, validation rules, deduplication flow, and export integration journeys"
       },
       {
         icon: "bi-people",
         label: "Primary Users",
-        text: "Prospects and learners moving through multi-touchpoint journeys"
+        text: "Agency and enterprise teams across the UK and Europe managing lead generation and validation workflows"
       },
       {
         icon: "bi-graph-up-arrow",
         label: "Improvement Focus",
-        text: "Clarity of progression, reduced ambiguity, and stronger end-to-end coherence"
+        text: "Reduced onboarding friction, clearer process completion, and stronger lead quality outcomes"
       }
     ],
     context:
-      "The journey spanned multiple properties and intents, creating handoff gaps between quote activity, onboarding, and LMS-linked progression. Users often lost context as they moved across touchpoints.",
+      "Databowl is a SaaS platform for lead validation, cleaning, and management. When the engagement started in January 2018, the platform was internally nicknamed the 'Grey Beast' because of its dated UI, inconsistent UX patterns, and complex setup experience. Sharebowl, a dedicated landing-page service, supported lead acquisition while Databowl handled downstream lead operations.",
     challenge:
-      "The challenge was creating a consistent journey logic across a distributed ecosystem so users could progress confidently while internal workflows remained practical and aligned.",
+      "The core challenge was making complex, process-driven journeys usable at scale. New users needed to configure validation logic, deduplication, and export integrations correctly in early setup, but the legacy experience made progression unclear and increased onboarding risk.",
     keyChanges: [
       {
-        title: "Cross-touchpoint journey mapping",
+        title: "Wizard-style journey architecture for setup-heavy workflows",
         bullets: [
-          "Mapped breakpoints where users dropped context between properties",
-          "Identified friction points that interrupted progression to meaningful next steps"
+          "Redesigned onboarding around structured wizard-style flows to match process-led tasks",
+          "Made first-campaign setup clearer by guiding users through required decisions in the right sequence"
         ]
       },
       {
-        title: "Flow and messaging standardisation",
+        title: "Critical setup path redesign",
         bullets: [
-          "Aligned navigation cues, content hierarchy, and interaction expectations",
-          "Reduced interpretation burden for users moving across different journey stages"
+          "Reworked validation rule setup, deduplication controls, and export integration steps",
+          "Reduced ambiguity in high-impact configuration areas that directly affected lead outcomes"
         ]
       },
       {
-        title: "Acquisition-to-learning continuity",
+        title: "Design system and handoff maturity",
         bullets: [
-          "Connected front-end acquisition decisions to downstream LMS-linked outcomes",
-          "Created clearer transitions between commercial and learning touchpoints"
+          "Delivered journey maps, interactive prototypes, and full developer handoff packages",
+          "Used UXPin and Axure RP initially, then moved to Figma with more structured component-based standards"
         ]
       },
       {
         title: "Operational alignment",
         bullets: [
-          "Ensured UX decisions reflected internal handling and delivery realities",
-          "Improved consistency between strategy intent and practical execution"
+          "Led product experience decisions with commercial and engineering input to keep delivery realistic",
+          "Translated leadership vision into practical, buildable UX direction for a six-developer team"
         ]
       }
     ],
     before: [
-      "Fragmented progression across disconnected properties",
-      "Ambiguous next steps between acquisition and learning touchpoints",
-      "Inconsistent journey logic creating avoidable user uncertainty"
+      "Legacy UI patterns made complex setup journeys difficult to interpret",
+      "Onboarding and first-campaign flows created avoidable confusion and drop-off risk",
+      "Validation, deduplication, and export configuration were high-friction for new users"
     ],
     after: [
-      "Clearer handoffs across acquisition, onboarding, and LMS-linked progression",
-      "Lower ambiguity and stronger confidence in journey progression",
-      "Better UX coherence aligned with operational constraints"
+      "Structured onboarding and campaign setup flows made progression clearer",
+      "Lower onboarding friction and better client confidence in early platform use",
+      "More consistent UX direction that supported continuous product improvement through 2020"
     ],
     outcomes: [
-      "Clearer progression across connected touchpoints",
-      "Lower ambiguity between marketing, onboarding, and learning experiences",
-      "Stronger alignment between UX decisions and operational realities",
-      "More coherent ecosystem behavior across distributed user journeys"
+      "Increased client base as the platform became easier to adopt and trust",
+      "Reduced churn during onboarding by improving setup clarity and flow completion",
+      "Improved downstream lead quality and conversion outcomes for clients",
+      "Stronger product-market credibility by turning a dated legacy experience into a more mature SaaS platform"
     ],
     note:
-      "Quantitative outputs are excluded due to permission constraints. This case emphasizes strategic structure and observable behavioural improvements.",
+      "Precise commercial metrics are excluded due to confidentiality constraints. Outcomes are intentionally described as directional improvements observed across onboarding, client retention, and lead quality performance.",
     ctaPrimary: {
       label: "Discuss a similar challenge",
       href: "/index.html#contact"
@@ -253,88 +253,87 @@ module.exports = {
     }
   },
 
-  quotehound: {
-    title: "QuoteHound: Designing a connected multi-site quote ecosystem",
+  soloprotect: {
+    title: "SoloProtect: UX-led evolution into IoT-aware safety and fleet monitoring",
     intro:
-      "QuoteHound required coordinated UX across multiple acquisition journeys while keeping downstream Databowl workflow requirements intact.",
+      "From January 2020 to January 2021, this work focused on strengthening SoloProtect's supervisor and operations experience by connecting lone-worker alarm devices, geolocation visibility, and incident response workflows into clearer product journeys.",
     summaryCards: [
       {
         icon: "bi-briefcase",
         label: "Role",
-        text: "UX architecture and conversion flow design across linked quote properties"
+        text: "UX Developer embedded in the engineering team"
       },
       {
         icon: "bi-diagram-3",
         label: "Scope",
-        text: "Multi-site consistency, trust-first progression, and form journey optimisation"
+        text: "Desktop web interface, geolocation service UX, and first iteration of a new SoloProtect app for handoff"
       },
       {
         icon: "bi-people",
         label: "Primary Users",
-        text: "Insurance prospects moving through high-friction quote and enquiry flows"
+        text: "Supervisors and operations teams monitoring lone-worker alarms and fleet activity"
       },
       {
         icon: "bi-graph-up-arrow",
         label: "Improvement Focus",
-        text: "Completion confidence, lead quality continuity, and cross-system alignment"
+        text: "Faster monitoring decisions, stronger situational visibility, and clearer incident response actions"
       }
     ],
     context:
-      "Several quote-focused properties needed consistent UX logic, strong trust signals, and high completion momentum while feeding into linked operational and learning systems.",
+      "SoloProtect combines wearable lone-worker alarm devices with fleet-level monitoring and operational response tooling. The work required aligning UX decisions with high-stakes monitoring contexts, embedded IoT device behavior, and practical engineering delivery constraints.",
     challenge:
-      "The challenge was balancing conversion speed with confidence in a high-consideration domain, while ensuring upstream UX decisions aligned with Databowl-linked downstream processes.",
+      "The challenge was making location-aware monitoring and response decisions clearer for supervisory users while maturing both design quality and implementation in a new technical environment (.NET, C#, Blazor).",
     keyChanges: [
       {
-        title: "Shared UX pattern system across properties",
+        title: "Geolocation monitoring experience",
         bullets: [
-          "Defined repeatable layout and interaction structures across quote properties",
-          "Increased familiarity and reduced cognitive switching between journeys"
+          "Led creation of a new geolocating service experience for individual alarm tracking and fleet oversight",
+          "Improved map-level clarity so supervisors could identify status and location context faster during live monitoring"
         ]
       },
       {
-        title: "High-friction form flow optimisation",
+        title: "Supervisor and ops desktop interface design",
         bullets: [
-          "Improved sequencing, hierarchy, and trust cue placement during quote progression",
-          "Supported decision confidence without slowing momentum"
+          "Designed core desktop web journeys used by supervisors and operations teams",
+          "Improved journey flow and decision support in incident-response and oversight use cases"
         ]
       },
       {
-        title: "Acquisition-to-operations continuity",
+        title: "Prototype to production delivery",
         bullets: [
-          "Aligned front-end UX choices with Databowl-linked downstream handling needs",
-          "Protected lead quality by reducing ambiguity in captured intent"
+          "Created interactive prototypes in Figma and Axure RP, then translated approved journeys into product interfaces",
+          "Built production-ready interfaces and components using C#, Blazor, and Azure DevOps workflows"
         ]
       },
       {
-        title: "Ecosystem-level experience consistency",
+        title: "App foundation and handoff",
         bullets: [
-          "Connected multi-site experience decisions into one coherent service layer",
-          "Improved overall continuity between user-facing journeys and internal workflows"
+          "Developed the first iteration of the new SoloProtect app experience",
+          "Prepared structured handoff for full engineering continuation and scale-out"
         ]
       }
     ],
     before: [
-      "Inconsistent UX patterns across quote properties",
-      "Higher friction in key form stages affecting completion confidence",
-      "Weaker continuity between acquisition and downstream workflows"
+      "Lower visibility across individual alarm events and broader fleet context",
+      "Harder-to-scan supervisory journeys in incident and monitoring scenarios",
+      "Less mature UX-to-engineering flow for delivering consistent interfaces"
     ],
     after: [
-      "More consistent multi-site experience and interaction logic",
-      "Smoother progression through quote journeys with better trust support",
-      "Stronger ecosystem alignment from user intent through operational handling"
+      "Clearer map-based monitoring for both single-device and fleet-level oversight",
+      "More confident supervisor decision-making in live incident contexts",
+      "Stronger design-to-delivery consistency through prototype-led implementation"
     ],
     outcomes: [
-      "More consistent user experience across a multi-site ecosystem",
-      "Improved quote-flow continuity through trust and progression design",
-      "Better alignment between acquisition UX and internal workflow needs",
-      "Clearer ecosystem behavior supporting both conversion and operations"
+      "Faster monitoring decisions for supervisor and operations teams",
+      "Safer, more visible lone workers through clearer geolocation awareness",
+      "Improved incident response clarity across high-priority workflows",
+      "Broader full-stack capability growth in .NET, C#, and Blazor delivery"
     ],
     note:
-      "Where precise conversion data is restricted, this case focuses on structural decisions, behavioural intent, and cross-system UX coherence.",
+      "Due to confidentiality constraints, this case emphasizes responsibilities, journey improvements, and observable operational outcomes rather than exact incident or performance metrics.",
     ctaPrimary: {
-      label: "View QuoteHound live flow",
-      href: "/QuoteHound1_demo/quotehound1.html",
-      newTab: true
+      label: "Discuss a similar challenge",
+      href: "/index.html#contact"
     },
     ctaSecondary: {
       label: "All case studies",
