@@ -117,7 +117,7 @@
     </div>
   </section>
 
-  <section class="section bg-surface">
+  <section class="section bg-surface case-outcomes">
     <div class="container">
       <h2 class="h2 fw-semibold mb-3">Outcomes and improvements</h2>
       <ul class="list-unstyled mb-0">
@@ -128,12 +128,12 @@
       {% if cs.note %}
         <p class="small text-muted mt-3 mb-0">{{ cs.note }}</p>
       {% endif %}
-      <div class="mt-4">
+      <div class="mt-4 case-study-cta">
         {% if cs.ctaPrimary %}
           <a class="btn btn-primary" href="{{ cs.ctaPrimary.href }}"{% if cs.ctaPrimary.newTab %} target="_blank" rel="noopener"{% endif %}>{{ cs.ctaPrimary.label }}</a>
         {% endif %}
         {% if cs.ctaSecondary %}
-          <a class="btn btn-outline-secondary ms-2" href="{{ cs.ctaSecondary.href }}">{{ cs.ctaSecondary.label }}</a>
+          <a class="btn btn-outline-secondary" href="{{ cs.ctaSecondary.href }}">{{ cs.ctaSecondary.label }}</a>
         {% endif %}
       </div>
     </div>
