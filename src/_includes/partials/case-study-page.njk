@@ -23,6 +23,26 @@
     </div>
   </header>
 
+  {% if cs.gallery and (cs.gallery | length) > 0 %}
+    <section class="section case-gallery">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between mb-3">
+          <h2 class="h4 fw-semibold mb-0">Selected interface snapshots</h2>
+        </div>
+        <div class="case-gallery-grid">
+          {% for image in cs.gallery %}
+              <figure class="card card-soft case-gallery-card{% if loop.first %} is-lead{% endif %}">
+                <img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy" class="case-gallery-image" />
+                {% if image.caption %}
+                  <figcaption class="case-gallery-caption">{{ image.caption }}</figcaption>
+                {% endif %}
+              </figure>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
   <section class="section">
     <div class="container">
       <div class="row g-4">

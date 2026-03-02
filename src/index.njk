@@ -187,79 +187,77 @@ headExtras: |
         </div>
       </div>
 
-      <div class="row g-3">
-        {% for project in work.items %}
-          <div class="col-lg-6">
-            <div class="card card-soft h-100 hover-rise">
-              <div class="card-body p-4 p-md-5">
-                <div class="showcase mb-4" data-showcase>
-                  <div class="showcase-controls" role="tablist" aria-label="Preview mode">
-                    <button class="showcase-toggle is-active" type="button" data-showcase-tab data-showcase-target="desktop" role="tab" aria-selected="true">Desktop</button>
-                    <button class="showcase-toggle" type="button" data-showcase-tab data-showcase-target="mobile" role="tab" aria-selected="false">Mobile</button>
+      <div id="ffWorkCarousel" class="carousel slide ff-work-carousel" data-bs-ride="false" data-bs-touch="true">
+        {% if work.items | length > 3 %}
+          <div class="carousel-indicators ff-work-indicators">
+            {% set slideIndex = 0 %}
+            {% for project in work.items %}
+              {% if loop.index0 % 3 == 0 %}
+                <button type="button" data-bs-target="#ffWorkCarousel" data-bs-slide-to="{{ slideIndex }}" {% if slideIndex == 0 %}class="active" aria-current="true"{% endif %} aria-label="Slide {{ slideIndex + 1 }}"></button>
+                {% set slideIndex = slideIndex + 1 %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <div class="carousel-inner">
+          {% for project in work.items %}
+            {% if loop.index0 % 3 == 0 %}
+              <div class="carousel-item{% if loop.index0 == 0 %} active{% endif %}">
+                <div class="row g-3">
+            {% endif %}
+
+            <div class="col-12 col-lg-4">
+              <a class="card card-soft work-card work-card-link h-100 hover-rise" href="/{{ project.url }}" data-goatcounter-click="case-study-view" aria-label="Read {{ project.title }} case study">
+                <div class="card-body p-4">
+                  <div class="work-thumb mb-3">
+                    {% if project.showcase and project.showcase.images and project.showcase.images[0] %}
+                      <img src="/{{ project.showcase.images[0].src }}" alt="{{ project.showcase.images[0].alt }}" loading="lazy" />
+                    {% endif %}
                   </div>
-                  <div class="showcase-pane is-active" data-showcase-pane="desktop">
-                    <div class="showcase-main">
-                      <div id="ffCarousel-{{ project.key }}" class="carousel slide ff-showcase-carousel" data-bs-ride="false">
-                        <div class="carousel-inner">
-                          {% for img in project.showcase.images %}
-                            <div class="carousel-item{% if loop.first %} active{% endif %}">
-                              <img src="/{{ img.src }}" class="d-block w-100" alt="{{ img.alt }}" loading="lazy" />
-                            </div>
-                          {% endfor %}
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#ffCarousel-{{ project.key }}" data-bs-slide="prev" aria-label="Previous">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#ffCarousel-{{ project.key }}" data-bs-slide="next" aria-label="Next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
+                  <div class="project-header">
+                    <div>
+                      <h3 class="h5 fw-semibold mb-2">{{ project.title }}</h3>
+                      <p class="text-muted mb-0 work-card-subtitle">{{ project.subtitle }}</p>
+                      <div class="d-flex flex-wrap gap-2 mt-3">
+                        {% for t in project.tech %}
+                          {% if loop.index <= 2 %}
+                            <span class="chip chip-tech">{{ t }}</span>
+                          {% endif %}
+                        {% endfor %}
+                        {% for t in project.tags %}
+                          {% if loop.first %}
+                            <span class="chip">{{ t }}</span>
+                          {% endif %}
+                        {% endfor %}
                       </div>
                     </div>
                   </div>
-                  {% if project.showcase.mobile %}
-                    <div class="showcase-pane" data-showcase-pane="mobile">
-                      <div class="showcase-mobile">
-                        <div class="showcase-mobile-scroll">
-                          <img src="/{{ project.showcase.mobile.src }}" alt="{{ project.showcase.mobile.alt }}" loading="lazy" />
-                        </div>
-                      </div>
-                    </div>
-                  {% endif %}
-                </div>
-                <div class="project-header">
-                  <div>
-                    <h3 class="h4 fw-semibold mb-1">{{ project.title }}</h3>
-                    <p class="text-muted mb-0">{{ project.subtitle }}</p>
-                    <div class="d-flex flex-wrap gap-2 mt-3">
-                      {% for t in project.tech %}
-                        <span class="chip chip-tech">{{ t }}</span>
-                      {% endfor %}
-                      {% for t in project.tags %}
-                        <span class="chip">{{ t }}</span>
-                      {% endfor %}
-                    </div>
+                  <hr class="my-3" />
+                  <div class="result-pill">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <span class="fw-semibold">Outcome</span>
+                    <span class="text-muted work-card-outcome">{{ project.result }}</span>
                   </div>
                 </div>
-                <div class="mt-4 d-flex flex-wrap gap-2">
-                  <a class="btn btn-sm btn-primary" href="/{{ project.url }}" data-goatcounter-click="case-study-view">
-                    <i class="bi bi-box-arrow-up-right me-2"></i>Read Case Study
-                  </a>
-                </div>
-                <hr class="my-4" />
-                <ul class="list-unstyled mb-0">
-                  {% for item in project.bullets %}
-                    <li class="mb-2"><i class="bi bi-check2 me-2"></i>{{ item }}</li>
-                  {% endfor %}
-                </ul>
-                <div class="result-pill mt-3">
-                  <i class="bi bi-graph-up-arrow"></i>
-                  <span class="fw-semibold">Outcome</span>
-                  <span class="text-muted">{{ project.result }}</span>
+              </a>
+            </div>
+
+            {% if loop.index0 % 3 == 2 or loop.last %}
                 </div>
               </div>
-            </div>
-          </div>
-        {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {% if work.items | length > 3 %}
+          <button class="carousel-control-prev ff-work-control-prev" type="button" data-bs-target="#ffWorkCarousel" data-bs-slide="prev" aria-label="Previous case studies">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next ff-work-control-next" type="button" data-bs-target="#ffWorkCarousel" data-bs-slide="next" aria-label="Next case studies">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        {% endif %}
       </div>
     </div>
   </section>

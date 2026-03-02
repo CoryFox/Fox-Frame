@@ -96,6 +96,23 @@ module.exports = {
         text: "Real-time interaction trust, reduced onboarding friction, and faster delivery through systemisation"
       }
     ],
+    gallery: [
+      {
+        src: "/assets/case-studies/fourjaw/fourjaw-hydrafeed-downtime.webp",
+        alt: "FourJaw downtime logging interface",
+        caption: "Operator workflow for downtime logging"
+      },
+      {
+        src: "/assets/case-studies/fourjaw/fourjaw-sps-operator.webp",
+        alt: "FourJaw operator view on production interface",
+        caption: "Operator-facing workflow for live production tasks"
+      },
+      {
+        src: "/assets/case-studies/fourjaw/fourjaw-sps-timeline.webp",
+        alt: "FourJaw timeline and status tracking interface",
+        caption: "Timeline visibility for status and events"
+      }
+    ],
     context:
       "FourJaw provides manufacturing analytics software used by operational teams to monitor machine performance and improve production efficiency. As product scope expanded, core user journeys became harder to navigate and harder for teams to evolve consistently.",
     challenge:
@@ -191,6 +208,23 @@ module.exports = {
         text: "Reduced onboarding friction, clearer process completion, and stronger lead quality outcomes"
       }
     ],
+    gallery: [
+      {
+        src: "/assets/case-studies/databowl/solutions-system.webp",
+        alt: "Databowl system overview screen",
+        caption: "Core system overview and navigation structure"
+      },
+      {
+        src: "/assets/case-studies/databowl/solutions-lead-generation.webp",
+        alt: "Databowl lead generation workflow",
+        caption: "Lead generation journey and campaign flow"
+      },
+      {
+        src: "/assets/case-studies/databowl/shoulder.webp",
+        alt: "Databowl campaign and lead operations interface",
+        caption: "Campaign and lead operations interface"
+      }
+    ],
     context:
       "Databowl is a SaaS platform for lead validation, cleaning, and management. When the engagement started in January 2018, the platform was internally nicknamed the 'Grey Beast' because of its dated UI, inconsistent UX patterns, and complex setup experience. Sharebowl, a dedicated landing-page service, supported lead acquisition while Databowl handled downstream lead operations.",
     challenge:
@@ -277,6 +311,28 @@ module.exports = {
         icon: "bi-graph-up-arrow",
         label: "Improvement Focus",
         text: "Faster monitoring decisions, stronger situational visibility, and clearer incident response actions"
+      }
+    ],
+    gallery: [
+      {
+        src: "/assets/case-studies/soloprotect/soloprotect-overview.webp",
+        alt: "SoloProtect monitoring overview",
+        caption: "Monitoring overview for live supervisory oversight"
+      },
+      {
+        src: "/assets/case-studies/soloprotect/soloprotect-insights.webp",
+        alt: "SoloProtect insights and operational metrics view",
+        caption: "Operational insights and monitoring metrics"
+      },
+      {
+        src: "/assets/case-studies/soloprotect/soloprotect-location.webp",
+        alt: "SoloProtect live location interface",
+        caption: "Location visibility and map-based status context"
+      },
+      {
+        src: "/assets/case-studies/soloprotect/soloprotect-mobile.webp",
+        alt: "SoloProtect mobile alarm monitoring interface",
+        caption: "Mobile alarm monitoring interface"
       }
     ],
     context:

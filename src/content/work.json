@@ -14,10 +14,10 @@
     "result": "Improved decision velocity, clearer product direction, and stronger cross-team confidence.",
     "showcase": {
       "images": [
-        { "src": "assets/hero-mpc.png", "alt": "Case study visual placeholder for FourJaw strategic UX direction" },
-        { "src": "assets/project-trades.svg", "alt": "Case study visual placeholder representing FourJaw workflow redesign" }
+        { "src": "assets/case-studies/fourjaw/fourjaw-hydrafeed-downtime.webp", "alt": "FourJaw operator downtime logging interface" },
+        { "src": "assets/case-studies/fourjaw/fourjaw-sps-timeline.webp", "alt": "FourJaw timeline view interface" }
       ],
-      "mobile": { "src": "assets/showcase-mpc-mobile.png", "alt": "Case study mobile visual placeholder for FourJaw" }
+      "mobile": { "src": "assets/case-studies/fourjaw/fourjaw-sps-operator.webp", "alt": "FourJaw operator view" }
     }
   },
   {
@@ -35,31 +35,31 @@
     "result": "Faster monitoring decisions and clearer incident-response visibility for operational teams.",
     "showcase": {
       "images": [
-        { "src": "assets/hero-over50.png", "alt": "Case study visual placeholder for SoloProtect geolocation monitoring experience" },
-        { "src": "assets/project-retail.svg", "alt": "Case study visual placeholder representing SoloProtect operations workflow design" }
+        { "src": "assets/case-studies/soloprotect/soloprotect-overview.webp", "alt": "SoloProtect monitoring overview interface" },
+        { "src": "assets/case-studies/soloprotect/soloprotect-insights.webp", "alt": "SoloProtect insights interface" }
       ],
-      "mobile": { "src": "assets/showcase-nyf-mobile.png", "alt": "Case study mobile visual placeholder for SoloProtect" }
+      "mobile": { "src": "assets/case-studies/soloprotect/soloprotect-mobile.webp", "alt": "SoloProtect mobile interface" }
     }
   },
   {
     "key": "databowl",
     "title": "Databowl",
-    "subtitle": "Redesigned onboarding and learning flow architecture across a lead-generation platform connected to LMS experiences.",
+    "subtitle": "Redesigned onboarding and lead flow architecture across a lead-generation platform connected to a Lead Management System.",
     "url": "case-studies/databowl/",
-    "tech": ["Service Design", "Learning Journey UX", "Journey Mapping"],
-    "tags": ["LMS", "Lead Generation", "Ecosystem"],
+    "tech": ["Service Design", "Lead Flow UX", "Journey Mapping"],
+    "tags": ["Lead Management System", "Lead Generation", "Ecosystem"],
     "bullets": [
-      "Mapped fragmented acquisition-to-learning journeys into one coherent flow",
+      "Mapped fragmented acquisition-to-lead-management journeys into one coherent flow",
       "Reframed content and interaction patterns around user intent and progression",
-      "Reduced ambiguity between quote funnels, learning touchpoints, and next actions"
+      "Reduced ambiguity between quote funnels, lead-management touchpoints, and next actions"
     ],
     "result": "A clearer multi-touchpoint journey that improved usability for users and operators.",
     "showcase": {
       "images": [
-        { "src": "assets/hero-tutor.png", "alt": "Case study visual placeholder for Databowl journey architecture" },
-        { "src": "assets/project-tutor.svg", "alt": "Case study visual placeholder representing Databowl LMS integration" }
+        { "src": "assets/case-studies/databowl/solutions-system.webp", "alt": "Databowl lead management platform interface" },
+        { "src": "assets/case-studies/databowl/solutions-lead-generation.webp", "alt": "Databowl lead generation workflow interface" }
       ],
-      "mobile": { "src": "assets/showcase-nyf-mobile.png", "alt": "Case study mobile visual placeholder for Databowl" }
+      "mobile": { "src": "assets/case-studies/databowl/shoulder.webp", "alt": "Databowl campaign view" }
     }
   }
 ]
